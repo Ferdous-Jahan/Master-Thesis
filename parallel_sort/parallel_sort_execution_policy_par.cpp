@@ -29,7 +29,7 @@ int main() {
     auto end = std::chrono::high_resolution_clock::now();
     double elapsed_seconds = std::chrono::duration<double>(end - start).count();
 
-    std::cout << "Parallel policy sort completed in " << elapsed_seconds << " seconds.\n";
+    std::cout << "Parallel sequenced policy sort completed in " << elapsed_seconds << " seconds.\n";
     std::cout << "Data sorted: " << (is_sorted(data) ? "Yes" : "No") << "\n";
 
     return 0;

@@ -1,0 +1,862 @@
+desc: (none)
+cmd: ./parallel_sort_threads
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1982866
+mem_heap_B=4073728
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=80898859
+mem_heap_B=4073768
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=84482693
+mem_heap_B=4074420
+mem_heap_extra_B=84
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=89261591
+mem_heap_B=4074420
+mem_heap_extra_B=84
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=92090469
+mem_heap_B=4074416
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=96900628
+mem_heap_B=4074416
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=100426459
+mem_heap_B=4074420
+mem_heap_extra_B=84
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=104947540
+mem_heap_B=4598704
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=108115954
+mem_heap_B=4074420
+mem_heap_extra_B=84
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=111290051
+mem_heap_B=4074416
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=116052458
+mem_heap_B=4074416
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=119273675
+mem_heap_B=4074420
+mem_heap_extra_B=84
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=124431266
+mem_heap_B=4074416
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=129045759
+mem_heap_B=4139952
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=132107650
+mem_heap_B=4074416
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=135503923
+mem_heap_B=5647280
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5647280 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4000000 0x1093C3: allocate (new_allocator.h:151)
+  n1: 4000000 0x1093C3: allocate (alloc_traits.h:482)
+   n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:381)
+    n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:378)
+     n1: 4000000 0x1093C3: _M_create_storage (stl_vector.h:398)
+      n1: 4000000 0x1093C3: _Vector_base (stl_vector.h:335)
+       n1: 4000000 0x1093C3: vector (stl_vector.h:557)
+        n0: 4000000 0x1093C3: main (parallel_sort_threads.cpp:54)
+ n1: 1572864 0x10A205: allocate (new_allocator.h:151)
+  n1: 1572864 0x10A205: allocate (alloc_traits.h:482)
+   n1: 1572864 0x10A205: _M_allocate (stl_vector.h:381)
+    n1: 1572864 0x10A205: _M_allocate (stl_vector.h:378)
+     n2: 1572864 0x10A205: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) (vector.tcc:459)
+      n1: 1048576 0x109C50: push_back (stl_vector.h:1292)
+       n2: 1048576 0x109C50: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:14)
+        n1: 1048576 0x109E63: parallel_merge_sort(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:38)
+         n1: 1048576 0x109E63: parallel_merge_sort(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:38)
+          n0: 1048576 0x1094F3: main (parallel_sort_threads.cpp:66)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+      n1: 524288 0x109C78: push_back (stl_vector.h:1292)
+       n2: 524288 0x109C78: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:16)
+        n1: 524288 0x109E63: parallel_merge_sort(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:38)
+         n1: 524288 0x109E63: parallel_merge_sort(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:38)
+          n0: 524288 0x1094F3: main (parallel_sort_threads.cpp:66)
+        n0: 0 in 2 places, all below massif's threshold (1.00%)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 688 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=140622034
+mem_heap_B=4074416
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=145381147
+mem_heap_B=4074416
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=151432150
+mem_heap_B=4074420
+mem_heap_extra_B=84
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=154596860
+mem_heap_B=4074416
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=159366754
+mem_heap_B=4074428
+mem_heap_extra_B=100
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=162683951
+mem_heap_B=4598704
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=165841711
+mem_heap_B=4074420
+mem_heap_extra_B=84
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=170622919
+mem_heap_B=4074420
+mem_heap_extra_B=84
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=175434917
+mem_heap_B=4074416
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=178967484
+mem_heap_B=4074420
+mem_heap_extra_B=84
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=183715388
+mem_heap_B=4074420
+mem_heap_extra_B=84
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4074420 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4000000 0x1093C3: allocate (new_allocator.h:151)
+  n1: 4000000 0x1093C3: allocate (alloc_traits.h:482)
+   n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:381)
+    n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:378)
+     n1: 4000000 0x1093C3: _M_create_storage (stl_vector.h:398)
+      n1: 4000000 0x1093C3: _Vector_base (stl_vector.h:335)
+       n1: 4000000 0x1093C3: vector (stl_vector.h:557)
+        n0: 4000000 0x1093C3: main (parallel_sort_threads.cpp:54)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 692 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=186544296
+mem_heap_B=4074416
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=189806936
+mem_heap_B=4074416
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=192678863
+mem_heap_B=5647280
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=196343970
+mem_heap_B=4074416
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=199941043
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=204739212
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=207568057
+mem_heap_B=4074720
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=211143429
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=215941983
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=218770820
+mem_heap_B=4074720
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=222033418
+mem_heap_B=4074720
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=225632629
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=230399839
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=233228680
+mem_heap_B=4074720
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4074720 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4000000 0x1093C3: allocate (new_allocator.h:151)
+  n1: 4000000 0x1093C3: allocate (alloc_traits.h:482)
+   n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:381)
+    n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:378)
+     n1: 4000000 0x1093C3: _M_create_storage (stl_vector.h:398)
+      n1: 4000000 0x1093C3: _Vector_base (stl_vector.h:335)
+       n1: 4000000 0x1093C3: vector (stl_vector.h:557)
+        n0: 4000000 0x1093C3: main (parallel_sort_threads.cpp:54)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 992 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=42
+#-----------
+time=236826321
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=241590205
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=244419075
+mem_heap_B=4074720
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=247681702
+mem_heap_B=4074720
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=250553608
+mem_heap_B=5647584
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=254218716
+mem_heap_B=4074720
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=257798982
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=260586827
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=262572700
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=264616263
+mem_heap_B=4336864
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=266982095
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=269044159
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4074724 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4000000 0x1093C3: allocate (new_allocator.h:151)
+  n1: 4000000 0x1093C3: allocate (alloc_traits.h:482)
+   n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:381)
+    n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:378)
+     n1: 4000000 0x1093C3: _M_create_storage (stl_vector.h:398)
+      n1: 4000000 0x1093C3: _Vector_base (stl_vector.h:335)
+       n1: 4000000 0x1093C3: vector (stl_vector.h:557)
+        n0: 4000000 0x1093C3: main (parallel_sort_threads.cpp:54)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 996 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=271848082
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=273838663
+mem_heap_B=4087008
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=275861569
+mem_heap_B=4336864
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=278076759
+mem_heap_B=4861152
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=281514956
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=283499562
+mem_heap_B=4077792
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=286303493
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=288287376
+mem_heap_B=4080864
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=290319910
+mem_heap_B=4336864
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=292703335
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4074724 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4000000 0x1093C3: allocate (new_allocator.h:151)
+  n1: 4000000 0x1093C3: allocate (alloc_traits.h:482)
+   n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:381)
+    n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:378)
+     n1: 4000000 0x1093C3: _M_create_storage (stl_vector.h:398)
+      n1: 4000000 0x1093C3: _Vector_base (stl_vector.h:335)
+       n1: 4000000 0x1093C3: vector (stl_vector.h:557)
+        n0: 4000000 0x1093C3: main (parallel_sort_threads.cpp:54)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 996 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=64
+#-----------
+time=294689342
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=297530364
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=299523419
+mem_heap_B=4074724
+mem_heap_extra_B=92
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=301566967
+mem_heap_B=4336864
+mem_heap_extra_B=80
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=303782177
+mem_heap_B=4861152
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=305782739
+mem_heap_B=4173024
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=308486741
+mem_heap_B=5647584
+mem_heap_extra_B=88
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=312151849
+mem_heap_B=4074720
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=315024230
+mem_heap_B=5647544
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=317907958
+mem_heap_B=7220408
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=detailed
+n4: 7220408 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4000000 0x1093C3: allocate (new_allocator.h:151)
+  n1: 4000000 0x1093C3: allocate (alloc_traits.h:482)
+   n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:381)
+    n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:378)
+     n1: 4000000 0x1093C3: _M_create_storage (stl_vector.h:398)
+      n1: 4000000 0x1093C3: _Vector_base (stl_vector.h:335)
+       n1: 4000000 0x1093C3: vector (stl_vector.h:557)
+        n0: 4000000 0x1093C3: main (parallel_sort_threads.cpp:54)
+ n1: 3145728 0x10A205: allocate (new_allocator.h:151)
+  n1: 3145728 0x10A205: allocate (alloc_traits.h:482)
+   n1: 3145728 0x10A205: _M_allocate (stl_vector.h:381)
+    n1: 3145728 0x10A205: _M_allocate (stl_vector.h:378)
+     n2: 3145728 0x10A205: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) (vector.tcc:459)
+      n1: 2097152 0x109C78: push_back (stl_vector.h:1292)
+       n2: 2097152 0x109C78: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:16)
+        n2: 2097152 0x109E63: parallel_merge_sort(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:38)
+         n0: 2097152 0x1094F3: main (parallel_sort_threads.cpp:66)
+         n0: 0 in 2 places, all below massif's threshold (1.00%)
+        n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n1: 1048576 0x109C50: push_back (stl_vector.h:1292)
+       n2: 1048576 0x109C50: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:14)
+        n2: 1048576 0x109E63: parallel_merge_sort(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:38)
+         n0: 1048576 0x1094F3: main (parallel_sort_threads.cpp:66)
+         n0: 0 in 2 places, all below massif's threshold (1.00%)
+        n0: 0 in 3 places, all below massif's threshold (1.00%)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 952 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=74
+#-----------
+time=317999268
+mem_heap_B=7220408
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=detailed
+n4: 7220408 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4000000 0x1093C3: allocate (new_allocator.h:151)
+  n1: 4000000 0x1093C3: allocate (alloc_traits.h:482)
+   n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:381)
+    n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:378)
+     n1: 4000000 0x1093C3: _M_create_storage (stl_vector.h:398)
+      n1: 4000000 0x1093C3: _Vector_base (stl_vector.h:335)
+       n1: 4000000 0x1093C3: vector (stl_vector.h:557)
+        n0: 4000000 0x1093C3: main (parallel_sort_threads.cpp:54)
+ n1: 3145728 0x10A205: allocate (new_allocator.h:151)
+  n1: 3145728 0x10A205: allocate (alloc_traits.h:482)
+   n1: 3145728 0x10A205: _M_allocate (stl_vector.h:381)
+    n1: 3145728 0x10A205: _M_allocate (stl_vector.h:378)
+     n2: 3145728 0x10A205: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) (vector.tcc:459)
+      n1: 2097152 0x109C78: push_back (stl_vector.h:1292)
+       n2: 2097152 0x109C78: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:16)
+        n2: 2097152 0x109E63: parallel_merge_sort(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:38)
+         n0: 2097152 0x1094F3: main (parallel_sort_threads.cpp:66)
+         n0: 0 in 2 places, all below massif's threshold (1.00%)
+        n0: 0 in 3 places, all below massif's threshold (1.00%)
+      n1: 1048576 0x109C50: push_back (stl_vector.h:1292)
+       n2: 1048576 0x109C50: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:14)
+        n2: 1048576 0x109E63: parallel_merge_sort(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:38)
+         n0: 1048576 0x1094F3: main (parallel_sort_threads.cpp:66)
+         n0: 0 in 2 places, all below massif's threshold (1.00%)
+        n0: 0 in 3 places, all below massif's threshold (1.00%)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 952 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=75
+#-----------
+time=322500788
+mem_heap_B=4074680
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=325372932
+mem_heap_B=5647544
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=328256661
+mem_heap_B=7220408
+mem_heap_extra_B=72
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=332849490
+mem_heap_B=4074680
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=335721873
+mem_heap_B=5647504
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=338605601
+mem_heap_B=7220368
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=343415585
+mem_heap_B=10366096
+mem_heap_extra_B=4088
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=343646543
+mem_heap_B=10366096
+mem_heap_extra_B=4088
+mem_stacks_B=0
+heap_tree=peak
+n3: 10366096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 6291456 0x10A205: allocate (new_allocator.h:151)
+  n1: 6291456 0x10A205: allocate (alloc_traits.h:482)
+   n1: 6291456 0x10A205: _M_allocate (stl_vector.h:381)
+    n1: 6291456 0x10A205: _M_allocate (stl_vector.h:378)
+     n2: 6291456 0x10A205: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) (vector.tcc:459)
+      n1: 4194304 0x109C78: push_back (stl_vector.h:1292)
+       n2: 4194304 0x109C78: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:16)
+        n0: 4194304 0x1094F3: main (parallel_sort_threads.cpp:66)
+        n0: 0 in 4 places, all below massif's threshold (1.00%)
+      n1: 2097152 0x109C50: push_back (stl_vector.h:1292)
+       n2: 2097152 0x109C50: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_threads.cpp:14)
+        n0: 2097152 0x1094F3: main (parallel_sort_threads.cpp:66)
+        n0: 0 in 4 places, all below massif's threshold (1.00%)
+ n1: 4000000 0x1093C3: allocate (new_allocator.h:151)
+  n1: 4000000 0x1093C3: allocate (alloc_traits.h:482)
+   n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:381)
+    n1: 4000000 0x1093C3: _M_allocate (stl_vector.h:378)
+     n1: 4000000 0x1093C3: _M_create_storage (stl_vector.h:398)
+      n1: 4000000 0x1093C3: _Vector_base (stl_vector.h:335)
+       n1: 4000000 0x1093C3: vector (stl_vector.h:557)
+        n0: 4000000 0x1093C3: main (parallel_sort_threads.cpp:54)
+ n0: 74640 in 3 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=83
+#-----------
+time=352554540
+mem_heap_B=4074640
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=359571771
+mem_heap_B=75664
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty

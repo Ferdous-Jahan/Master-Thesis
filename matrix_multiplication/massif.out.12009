@@ -1,0 +1,767 @@
+desc: (none)
+cmd: ./matrix_multiplication_par
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=1978355
+mem_heap_B=73728
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=1998930
+mem_heap_B=217728
+mem_heap_extra_B=280
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=2013771
+mem_heap_B=341728
+mem_heap_extra_B=528
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=2029578
+mem_heap_B=473728
+mem_heap_extra_B=792
+mem_stacks_B=0
+heap_tree=detailed
+n4: 473728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 384000 0x109DF0: allocate (new_allocator.h:151)
+  n1: 384000 0x109DF0: allocate (alloc_traits.h:482)
+   n1: 384000 0x109DF0: _M_allocate (stl_vector.h:381)
+    n1: 384000 0x109DF0: _M_allocate (stl_vector.h:378)
+     n1: 384000 0x109DF0: _M_create_storage (stl_vector.h:398)
+      n1: 384000 0x109DF0: _Vector_base (stl_vector.h:335)
+       n1: 384000 0x109DF0: vector (stl_vector.h:603)
+        n1: 384000 0x109DF0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+         n1: 384000 0x109DF0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+          n1: 384000 0x10998C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+           n1: 384000 0x10998C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+            n1: 384000 0x10998C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+             n1: 384000 0x10998C: _M_fill_initialize (stl_vector.h:1707)
+              n1: 384000 0x10998C: vector (stl_vector.h:572)
+               n1: 384000 0x10998C: generate_matrix(unsigned long, unsigned long) (matrix_multiplication_par.cpp:10)
+                n0: 384000 0x1093A9: main (matrix_multiplication_par.cpp:33)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n1: 12000 0x109964: allocate (new_allocator.h:151)
+  n1: 12000 0x109964: allocate (alloc_traits.h:482)
+   n1: 12000 0x109964: _M_allocate (stl_vector.h:381)
+    n1: 12000 0x109964: _M_allocate (stl_vector.h:378)
+     n1: 12000 0x109964: _M_create_storage (stl_vector.h:398)
+      n1: 12000 0x109964: _Vector_base (stl_vector.h:335)
+       n1: 12000 0x109964: vector (stl_vector.h:571)
+        n1: 12000 0x109964: generate_matrix(unsigned long, unsigned long) (matrix_multiplication_par.cpp:10)
+         n0: 12000 0x1093A9: main (matrix_multiplication_par.cpp:33)
+ n0: 4000 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=2044898
+mem_heap_B=601728
+mem_heap_extra_B=1048
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=2060226
+mem_heap_B=729728
+mem_heap_extra_B=1304
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=2075546
+mem_heap_B=857728
+mem_heap_extra_B=1560
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=2090874
+mem_heap_B=985728
+mem_heap_extra_B=1816
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=2106194
+mem_heap_B=1113728
+mem_heap_extra_B=2072
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=2121522
+mem_heap_B=1241728
+mem_heap_extra_B=2328
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=2136842
+mem_heap_B=1369728
+mem_heap_extra_B=2584
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=2152170
+mem_heap_B=1497728
+mem_heap_extra_B=2840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=2173238
+mem_heap_B=1673728
+mem_heap_extra_B=3192
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1673728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1584000 0x109DF0: allocate (new_allocator.h:151)
+  n1: 1584000 0x109DF0: allocate (alloc_traits.h:482)
+   n1: 1584000 0x109DF0: _M_allocate (stl_vector.h:381)
+    n1: 1584000 0x109DF0: _M_allocate (stl_vector.h:378)
+     n1: 1584000 0x109DF0: _M_create_storage (stl_vector.h:398)
+      n1: 1584000 0x109DF0: _Vector_base (stl_vector.h:335)
+       n1: 1584000 0x109DF0: vector (stl_vector.h:603)
+        n1: 1584000 0x109DF0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+         n1: 1584000 0x109DF0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+          n1: 1584000 0x10998C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+           n1: 1584000 0x10998C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+            n1: 1584000 0x10998C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+             n1: 1584000 0x10998C: _M_fill_initialize (stl_vector.h:1707)
+              n1: 1584000 0x10998C: vector (stl_vector.h:572)
+               n1: 1584000 0x10998C: generate_matrix(unsigned long, unsigned long) (matrix_multiplication_par.cpp:10)
+                n0: 1584000 0x1093A9: main (matrix_multiplication_par.cpp:33)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 16000 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=2188566
+mem_heap_B=1801728
+mem_heap_extra_B=3448
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=2200054
+mem_heap_B=1897728
+mem_heap_extra_B=3640
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=2223550
+mem_heap_B=2089728
+mem_heap_extra_B=4024
+mem_stacks_B=0
+heap_tree=detailed
+n3: 2089728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2000000 0x109DF0: allocate (new_allocator.h:151)
+  n1: 2000000 0x109DF0: allocate (alloc_traits.h:482)
+   n1: 2000000 0x109DF0: _M_allocate (stl_vector.h:381)
+    n1: 2000000 0x109DF0: _M_allocate (stl_vector.h:378)
+     n1: 2000000 0x109DF0: _M_create_storage (stl_vector.h:398)
+      n1: 2000000 0x109DF0: _Vector_base (stl_vector.h:335)
+       n1: 2000000 0x109DF0: vector (stl_vector.h:603)
+        n1: 2000000 0x109DF0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+         n1: 2000000 0x109DF0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+          n1: 2000000 0x10998C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+           n1: 2000000 0x10998C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+            n1: 2000000 0x10998C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+             n1: 2000000 0x10998C: _M_fill_initialize (stl_vector.h:1707)
+              n1: 2000000 0x10998C: vector (stl_vector.h:572)
+               n1: 2000000 0x10998C: generate_matrix(unsigned long, unsigned long) (matrix_multiplication_par.cpp:10)
+                n0: 2000000 0x1093A9: main (matrix_multiplication_par.cpp:33)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 16000 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=27192724
+mem_heap_B=2089728
+mem_heap_extra_B=4024
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=27216018
+mem_heap_B=2265728
+mem_heap_extra_B=4360
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=27231338
+mem_heap_B=2393728
+mem_heap_extra_B=4616
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=27246666
+mem_heap_B=2521728
+mem_heap_extra_B=4872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=27261986
+mem_heap_B=2649728
+mem_heap_extra_B=5128
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=27277314
+mem_heap_B=2777728
+mem_heap_extra_B=5384
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=27292634
+mem_heap_B=2905728
+mem_heap_extra_B=5640
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=27307962
+mem_heap_B=3033728
+mem_heap_extra_B=5896
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=27327114
+mem_heap_B=3193728
+mem_heap_extra_B=6216
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=27341484
+mem_heap_B=3313728
+mem_heap_extra_B=6456
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=27355846
+mem_heap_B=3433728
+mem_heap_extra_B=6696
+mem_stacks_B=0
+heap_tree=detailed
+n3: 3433728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3332000 0x109DF0: allocate (new_allocator.h:151)
+  n1: 3332000 0x109DF0: allocate (alloc_traits.h:482)
+   n1: 3332000 0x109DF0: _M_allocate (stl_vector.h:381)
+    n1: 3332000 0x109DF0: _M_allocate (stl_vector.h:378)
+     n1: 3332000 0x109DF0: _M_create_storage (stl_vector.h:398)
+      n1: 3332000 0x109DF0: _Vector_base (stl_vector.h:335)
+       n1: 3332000 0x109DF0: vector (stl_vector.h:603)
+        n1: 3332000 0x109DF0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+         n1: 3332000 0x109DF0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+          n1: 3332000 0x10998C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+           n1: 3332000 0x10998C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+            n1: 3332000 0x10998C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+             n1: 3332000 0x10998C: _M_fill_initialize (stl_vector.h:1707)
+              n1: 3332000 0x10998C: vector (stl_vector.h:572)
+               n2: 3332000 0x10998C: generate_matrix(unsigned long, unsigned long) (matrix_multiplication_par.cpp:10)
+                n0: 2000000 0x1093A9: main (matrix_multiplication_par.cpp:33)
+                n0: 1332000 0x1093BB: main (matrix_multiplication_par.cpp:33)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 28000 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=27370216
+mem_heap_B=3553728
+mem_heap_extra_B=6936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=27384578
+mem_heap_B=3673728
+mem_heap_extra_B=7176
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=27398948
+mem_heap_B=3793728
+mem_heap_extra_B=7416
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=27413310
+mem_heap_B=3913728
+mem_heap_extra_B=7656
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=27436327
+mem_heap_B=4101728
+mem_heap_extra_B=8032
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4101728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4000000 0x109DF0: allocate (new_allocator.h:151)
+  n1: 4000000 0x109DF0: allocate (alloc_traits.h:482)
+   n1: 4000000 0x109DF0: _M_allocate (stl_vector.h:381)
+    n1: 4000000 0x109DF0: _M_allocate (stl_vector.h:378)
+     n1: 4000000 0x109DF0: _M_create_storage (stl_vector.h:398)
+      n1: 4000000 0x109DF0: _Vector_base (stl_vector.h:335)
+       n1: 4000000 0x109DF0: vector (stl_vector.h:603)
+        n1: 4000000 0x109DF0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+         n1: 4000000 0x109DF0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+          n1: 4000000 0x10998C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+           n1: 4000000 0x10998C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+            n1: 4000000 0x10998C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+             n1: 4000000 0x10998C: _M_fill_initialize (stl_vector.h:1707)
+              n1: 4000000 0x10998C: vector (stl_vector.h:572)
+               n2: 4000000 0x10998C: generate_matrix(unsigned long, unsigned long) (matrix_multiplication_par.cpp:10)
+                n0: 2000000 0x1093A9: main (matrix_multiplication_par.cpp:33)
+                n0: 2000000 0x1093BB: main (matrix_multiplication_par.cpp:33)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 28000 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=52406417
+mem_heap_B=4101728
+mem_heap_extra_B=8032
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=52413917
+mem_heap_B=4145728
+mem_heap_extra_B=8104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=52435464
+mem_heap_B=4325728
+mem_heap_extra_B=8464
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=52449826
+mem_heap_B=4445728
+mem_heap_extra_B=8704
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=52464196
+mem_heap_B=4565728
+mem_heap_extra_B=8944
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=52478558
+mem_heap_B=4685728
+mem_heap_extra_B=9184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=52492928
+mem_heap_B=4805728
+mem_heap_extra_B=9424
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=52514475
+mem_heap_B=4985728
+mem_heap_extra_B=9784
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=52528845
+mem_heap_B=5105728
+mem_heap_extra_B=10024
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=52543207
+mem_heap_B=5225728
+mem_heap_extra_B=10264
+mem_stacks_B=0
+heap_tree=detailed
+n3: 5225728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5112000 0x109DF0: allocate (new_allocator.h:151)
+  n1: 5112000 0x109DF0: allocate (alloc_traits.h:482)
+   n1: 5112000 0x109DF0: _M_allocate (stl_vector.h:381)
+    n1: 5112000 0x109DF0: _M_allocate (stl_vector.h:378)
+     n1: 5112000 0x109DF0: _M_create_storage (stl_vector.h:398)
+      n1: 5112000 0x109DF0: _Vector_base (stl_vector.h:335)
+       n1: 5112000 0x109DF0: vector (stl_vector.h:603)
+        n1: 5112000 0x109DF0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+         n2: 5112000 0x109DF0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+          n1: 4000000 0x10998C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+           n1: 4000000 0x10998C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+            n1: 4000000 0x10998C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+             n1: 4000000 0x10998C: _M_fill_initialize (stl_vector.h:1707)
+              n1: 4000000 0x10998C: vector (stl_vector.h:572)
+               n2: 4000000 0x10998C: generate_matrix(unsigned long, unsigned long) (matrix_multiplication_par.cpp:10)
+                n0: 2000000 0x1093A9: main (matrix_multiplication_par.cpp:33)
+                n0: 2000000 0x1093BB: main (matrix_multiplication_par.cpp:33)
+          n1: 1112000 0x1096A9: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+           n1: 1112000 0x1096A9: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+            n1: 1112000 0x1096A9: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+             n1: 1112000 0x1096A9: _M_fill_initialize (stl_vector.h:1707)
+              n1: 1112000 0x1096A9: vector (stl_vector.h:572)
+               n1: 1112000 0x1096A9: parallel_multiply(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&) (matrix_multiplication_par.cpp:21)
+                n0: 1112000 0x1093D6: main (matrix_multiplication_par.cpp:36)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 40000 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=52557577
+mem_heap_B=5345728
+mem_heap_extra_B=10504
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=52571939
+mem_heap_B=5465728
+mem_heap_extra_B=10744
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=52586309
+mem_heap_B=5585728
+mem_heap_extra_B=10984
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=52600671
+mem_heap_B=5705728
+mem_heap_extra_B=11224
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=52615041
+mem_heap_B=5825728
+mem_heap_extra_B=11464
+mem_stacks_B=0
+heap_tree=detailed
+n3: 5825728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5712000 0x109DF0: allocate (new_allocator.h:151)
+  n1: 5712000 0x109DF0: allocate (alloc_traits.h:482)
+   n1: 5712000 0x109DF0: _M_allocate (stl_vector.h:381)
+    n1: 5712000 0x109DF0: _M_allocate (stl_vector.h:378)
+     n1: 5712000 0x109DF0: _M_create_storage (stl_vector.h:398)
+      n1: 5712000 0x109DF0: _Vector_base (stl_vector.h:335)
+       n1: 5712000 0x109DF0: vector (stl_vector.h:603)
+        n1: 5712000 0x109DF0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+         n2: 5712000 0x109DF0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+          n1: 4000000 0x10998C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+           n1: 4000000 0x10998C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+            n1: 4000000 0x10998C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+             n1: 4000000 0x10998C: _M_fill_initialize (stl_vector.h:1707)
+              n1: 4000000 0x10998C: vector (stl_vector.h:572)
+               n2: 4000000 0x10998C: generate_matrix(unsigned long, unsigned long) (matrix_multiplication_par.cpp:10)
+                n0: 2000000 0x1093A9: main (matrix_multiplication_par.cpp:33)
+                n0: 2000000 0x1093BB: main (matrix_multiplication_par.cpp:33)
+          n1: 1712000 0x1096A9: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+           n1: 1712000 0x1096A9: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+            n1: 1712000 0x1096A9: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+             n1: 1712000 0x1096A9: _M_fill_initialize (stl_vector.h:1707)
+              n1: 1712000 0x1096A9: vector (stl_vector.h:572)
+               n1: 1712000 0x1096A9: parallel_multiply(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&) (matrix_multiplication_par.cpp:21)
+                n0: 1712000 0x1093D6: main (matrix_multiplication_par.cpp:36)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 40000 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=48
+#-----------
+time=52636588
+mem_heap_B=6005728
+mem_heap_extra_B=11824
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=52643773
+mem_heap_B=6065728
+mem_heap_extra_B=11944
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=52650027
+mem_heap_B=6113728
+mem_heap_extra_B=12040
+mem_stacks_B=0
+heap_tree=peak
+n3: 6113728 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 6000000 0x109DF0: allocate (new_allocator.h:151)
+  n1: 6000000 0x109DF0: allocate (alloc_traits.h:482)
+   n1: 6000000 0x109DF0: _M_allocate (stl_vector.h:381)
+    n1: 6000000 0x109DF0: _M_allocate (stl_vector.h:378)
+     n1: 6000000 0x109DF0: _M_create_storage (stl_vector.h:398)
+      n1: 6000000 0x109DF0: _Vector_base (stl_vector.h:335)
+       n1: 6000000 0x109DF0: vector (stl_vector.h:603)
+        n1: 6000000 0x109DF0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+         n2: 6000000 0x109DF0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+          n1: 4000000 0x10998C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+           n1: 4000000 0x10998C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+            n1: 4000000 0x10998C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+             n1: 4000000 0x10998C: _M_fill_initialize (stl_vector.h:1707)
+              n1: 4000000 0x10998C: vector (stl_vector.h:572)
+               n2: 4000000 0x10998C: generate_matrix(unsigned long, unsigned long) (matrix_multiplication_par.cpp:10)
+                n0: 2000000 0x1093A9: main (matrix_multiplication_par.cpp:33)
+                n0: 2000000 0x1093BB: main (matrix_multiplication_par.cpp:33)
+          n1: 2000000 0x1096A9: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+           n1: 2000000 0x1096A9: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+            n1: 2000000 0x1096A9: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+             n1: 2000000 0x1096A9: _M_fill_initialize (stl_vector.h:1707)
+              n1: 2000000 0x1096A9: vector (stl_vector.h:572)
+               n1: 2000000 0x1096A9: parallel_multiply(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&) (matrix_multiplication_par.cpp:21)
+                n0: 2000000 0x1093D6: main (matrix_multiplication_par.cpp:36)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 40000 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=1180412907
+mem_heap_B=6110752
+mem_heap_extra_B=12040
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=1180424850
+mem_heap_B=6106752
+mem_heap_extra_B=12032
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=1180432089
+mem_heap_B=5598752
+mem_heap_extra_B=11016
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=1180439328
+mem_heap_B=5090752
+mem_heap_extra_B=10000
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=1180446567
+mem_heap_B=4582752
+mem_heap_extra_B=8984
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=1180453762
+mem_heap_B=4070752
+mem_heap_extra_B=7976
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=1180461001
+mem_heap_B=3562752
+mem_heap_extra_B=6960
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=1180468240
+mem_heap_B=3054752
+mem_heap_extra_B=5944
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=1180475479
+mem_heap_B=2546752
+mem_heap_extra_B=4928
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=1180482674
+mem_heap_B=2034752
+mem_heap_extra_B=3920
+mem_stacks_B=0
+heap_tree=detailed
+n3: 2034752 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1948000 0x109DF0: allocate (new_allocator.h:151)
+  n1: 1948000 0x109DF0: allocate (alloc_traits.h:482)
+   n1: 1948000 0x109DF0: _M_allocate (stl_vector.h:381)
+    n1: 1948000 0x109DF0: _M_allocate (stl_vector.h:378)
+     n1: 1948000 0x109DF0: _M_create_storage (stl_vector.h:398)
+      n1: 1948000 0x109DF0: _Vector_base (stl_vector.h:335)
+       n1: 1948000 0x109DF0: vector (stl_vector.h:603)
+        n1: 1948000 0x109DF0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+         n2: 1948000 0x109DF0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+          n1: 1948000 0x10998C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+           n1: 1948000 0x10998C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+            n1: 1948000 0x10998C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+             n1: 1948000 0x10998C: _M_fill_initialize (stl_vector.h:1707)
+              n1: 1948000 0x10998C: vector (stl_vector.h:572)
+               n2: 1948000 0x10998C: generate_matrix(unsigned long, unsigned long) (matrix_multiplication_par.cpp:10)
+                n0: 1948000 0x1093A9: main (matrix_multiplication_par.cpp:33)
+                n0: 0 in 1 place, below massif's threshold (1.00%)
+          n0: 0 in 1 place, below massif's threshold (1.00%)
+ n1: 73728 0x491938E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+  n1: 73728 0x400571E: call_init.part.0 (dl-init.c:74)
+   n1: 73728 0x4005823: call_init (dl-init.c:120)
+    n1: 73728 0x4005823: _dl_init (dl-init.c:121)
+     n0: 73728 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+ n0: 13024 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=61
+#-----------
+time=1180489913
+mem_heap_B=1526752
+mem_heap_extra_B=2904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=1180497152
+mem_heap_B=1018752
+mem_heap_extra_B=1888
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=1180504391
+mem_heap_B=510752
+mem_heap_extra_B=872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=1180522843
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
