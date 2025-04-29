@@ -2,7 +2,8 @@
 
 # Define compilers and benchmark files
 COMPILERS=("g++-14" "g++-13" "clang++-17" "clang++-16")
-BENCHMARKS=("parallel_sort" "matrix_mul" "prod_cons" "atomic_ops" "thread_create")
+BENCHMARKS=("parallel_sort" "matrix_mul" "prod_cons" "atomic_ops" "thread_create"
+            "parallel_sort_pthread" "matrix_mul_pthread" "prod_cons_pthread" "atomic_ops_pthread" "thread_create_pthread")
 RUNS=5
 
 # Compilation flags
