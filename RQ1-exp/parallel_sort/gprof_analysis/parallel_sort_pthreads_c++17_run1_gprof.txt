@@ -3,14 +3,15 @@ Flat profile:
 Each sample counts as 0.01 seconds.
   %   cumulative   self              self     total           
  time   seconds   seconds    calls  us/call  us/call  name    
- 55.56      0.05     0.05      112   446.43   446.43  merge(std::vector<int, std::allocator<int> >&, int, int, int)
- 22.22      0.07     0.02  1000001     0.02     0.09  parallel_merge_sort(void*)
- 22.22      0.09     0.02      229    87.34    87.34  frame_dummy
-  0.00      0.09     0.00  1000193     0.00     0.00  std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
-  0.00      0.09     0.00     1864     0.00     0.00  void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&)
-  0.00      0.09     0.00     1603     0.00     0.00  std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
-  0.00      0.09     0.00        1     0.00     0.00  is_sorted(std::vector<int, std::allocator<int> > const&)
-  0.00      0.09     0.00        1     0.00     0.00  std::vector<int, std::allocator<int> >::~vector()
+ 40.00      0.04     0.04      120   333.33   333.33  merge(std::vector<int, std::allocator<int> >&, int, int, int)
+ 30.00      0.07     0.03  1000001     0.03     0.09  parallel_merge_sort(void*)
+ 10.00      0.08     0.01  1000195     0.01     0.01  std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+ 10.00      0.09     0.01      229    43.67    43.67  frame_dummy
+ 10.00      0.10     0.01                             _init
+  0.00      0.10     0.00     1878     0.00     0.00  void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&)
+  0.00      0.10     0.00     1603     0.00     0.00  std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+  0.00      0.10     0.00        1     0.00     0.00  is_sorted(std::vector<int, std::allocator<int> > const&)
+  0.00      0.10     0.00        1     0.00     0.00  std::vector<int, std::allocator<int> >::~vector()
 
  %         the percentage of the total running time of the
 time       program used by this function.
@@ -48,47 +49,50 @@ notice and this notice are preserved.
 		     Call graph (explanation follows)
 
 
-granularity: each sample hit covers 4 byte(s) for 11.11% of 0.09 seconds
+granularity: each sample hit covers 4 byte(s) for 10.00% of 0.10 seconds
 
 index % time    self  children    called     name
                                                  <spontaneous>
-[1]    100.0    0.00    0.09                 main [1]
-                0.02    0.07 1000001/1000001     parallel_merge_sort(void*) [2]
-                0.00    0.00       1/1           is_sorted(std::vector<int, std::allocator<int> > const&) [13]
-                0.00    0.00       1/1           std::vector<int, std::allocator<int> >::~vector() [14]
+[1]     90.0    0.00    0.09                 main [1]
+                0.03    0.06 1000001/1000001     parallel_merge_sort(void*) [2]
+                0.00    0.00       1/1           is_sorted(std::vector<int, std::allocator<int> > const&) [14]
+                0.00    0.00       1/1           std::vector<int, std::allocator<int> >::~vector() [15]
 -----------------------------------------------
-                                 228             parallel_merge_sort(void*) [2]
-                0.02    0.07 1000001/1000001     main [1]
-[2]    100.0    0.02    0.07 1000001+228     parallel_merge_sort(void*) [2]
-                0.05    0.00     112/112         merge(std::vector<int, std::allocator<int> >&, int, int, int) [3]
-                0.02    0.00     229/229         frame_dummy [4]
-                0.00    0.00 1000193/1000193     std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [10]
-                                 228             parallel_merge_sort(void*) [2]
+                                 230             parallel_merge_sort(void*) [2]
+                0.03    0.06 1000001/1000001     main [1]
+[2]     90.0    0.03    0.06 1000001+230     parallel_merge_sort(void*) [2]
+                0.04    0.00     120/120         merge(std::vector<int, std::allocator<int> >&, int, int, int) [3]
+                0.01    0.00 1000195/1000195     std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [5]
+                0.01    0.00     229/229         frame_dummy [4]
+                                 230             parallel_merge_sort(void*) [2]
 -----------------------------------------------
-                0.05    0.00     112/112         parallel_merge_sort(void*) [2]
-[3]     55.6    0.05    0.00     112         merge(std::vector<int, std::allocator<int> >&, int, int, int) [3]
-                0.00    0.00    1864/1864        void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [11]
+                0.04    0.00     120/120         parallel_merge_sort(void*) [2]
+[3]     40.0    0.04    0.00     120         merge(std::vector<int, std::allocator<int> >&, int, int, int) [3]
+                0.00    0.00    1878/1878        void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [12]
 -----------------------------------------------
-                               91762             frame_dummy [4]
-                0.02    0.00     229/229         parallel_merge_sort(void*) [2]
-[4]     22.2    0.02    0.00     229+91762   frame_dummy [4]
-                               91762             frame_dummy [4]
+                               91316             frame_dummy [4]
+                0.01    0.00     229/229         parallel_merge_sort(void*) [2]
+[4]     10.0    0.01    0.00     229+91316   frame_dummy [4]
+                               91316             frame_dummy [4]
 -----------------------------------------------
-                0.00    0.00 1000193/1000193     parallel_merge_sort(void*) [2]
-[10]     0.0    0.00    0.00 1000193         std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [10]
-                0.00    0.00    1603/1603        std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand() [12]
+                0.01    0.00 1000195/1000195     parallel_merge_sort(void*) [2]
+[5]     10.0    0.01    0.00 1000195         std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [5]
+                0.00    0.00    1603/1603        std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand() [13]
 -----------------------------------------------
-                0.00    0.00    1864/1864        merge(std::vector<int, std::allocator<int> >&, int, int, int) [3]
-[11]     0.0    0.00    0.00    1864         void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [11]
+                                                 <spontaneous>
+[6]     10.0    0.01    0.00                 _init [6]
 -----------------------------------------------
-                0.00    0.00    1603/1603        std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [10]
-[12]     0.0    0.00    0.00    1603         std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand() [12]
+                0.00    0.00    1878/1878        merge(std::vector<int, std::allocator<int> >&, int, int, int) [3]
+[12]     0.0    0.00    0.00    1878         void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [12]
+-----------------------------------------------
+                0.00    0.00    1603/1603        std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [5]
+[13]     0.0    0.00    0.00    1603         std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand() [13]
 -----------------------------------------------
                 0.00    0.00       1/1           main [1]
-[13]     0.0    0.00    0.00       1         is_sorted(std::vector<int, std::allocator<int> > const&) [13]
+[14]     0.0    0.00    0.00       1         is_sorted(std::vector<int, std::allocator<int> > const&) [14]
 -----------------------------------------------
                 0.00    0.00       1/1           main [1]
-[14]     0.0    0.00    0.00       1         std::vector<int, std::allocator<int> >::~vector() [14]
+[15]     0.0    0.00    0.00       1         std::vector<int, std::allocator<int> >::~vector() [15]
 -----------------------------------------------
 
  This table describes the call tree of the program, and was sorted by
@@ -181,6 +185,6 @@ notice and this notice are preserved.
 
 Index by function name
 
-   [2] parallel_merge_sort(void*) [12] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand() [14] std::vector<int, std::allocator<int> >::~vector()
-   [3] merge(std::vector<int, std::allocator<int> >&, int, int, int) [10] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [4] frame_dummy
-  [13] is_sorted(std::vector<int, std::allocator<int> > const&) [11] void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&)
+   [2] parallel_merge_sort(void*) [13] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand() [15] std::vector<int, std::allocator<int> >::~vector()
+   [3] merge(std::vector<int, std::allocator<int> >&, int, int, int) [5] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()() [6] _init
+  [14] is_sorted(std::vector<int, std::allocator<int> > const&) [12] void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) [4] frame_dummy
