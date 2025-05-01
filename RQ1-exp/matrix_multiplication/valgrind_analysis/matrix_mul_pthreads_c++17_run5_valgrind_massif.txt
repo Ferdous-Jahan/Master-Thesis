@@ -1,0 +1,412 @@
+--------------------------------------------------------------------------------
+Command:            ./matrix_mul_pthreads_c++17_massif
+Massif arguments:   (none)
+ms_print arguments: massif.out.17427
+--------------------------------------------------------------------------------
+
+
+    MB
+5.842^ #                                                                      
+     | #::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+     | #                                                                     :
+     | #                                                                     :
+     | #                                                                     :
+     | #                                                                     :
+     | #                                                                     :
+     |@#                                                                     :
+     |@#                                                                     :
+     |@#                                                                     :
+     |@#                                                                     :
+     |@#                                                                     :
+     |@#                                                                     @
+     |@#                                                                     @
+     |@#                                                                     @
+     |@#                                                                     @
+     |@#                                                                     @
+     |@#                                                                     @
+     |@#                                                                     @
+     |@#                                                                     @
+   0 +----------------------------------------------------------------------->Gi
+     0                                                                   2.615
+
+Number of snapshots: 66
+ Detailed snapshots: [4, 13, 16, 27, 32, 42, 47, 50 (peak), 60]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      1,981,226           73,736           73,728             8            0
+  2      2,001,801          218,008          217,728           280            0
+  3      2,016,642          342,256          341,728           528            0
+  4      2,032,449          474,520          473,728           792            0
+99.83% (473,728B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->80.92% (384,000B) 0x10A1A0: allocate (new_allocator.h:151)
+| ->80.92% (384,000B) 0x10A1A0: allocate (alloc_traits.h:482)
+|   ->80.92% (384,000B) 0x10A1A0: _M_allocate (stl_vector.h:381)
+|     ->80.92% (384,000B) 0x10A1A0: _M_allocate (stl_vector.h:378)
+|       ->80.92% (384,000B) 0x10A1A0: _M_create_storage (stl_vector.h:398)
+|         ->80.92% (384,000B) 0x10A1A0: _Vector_base (stl_vector.h:335)
+|           ->80.92% (384,000B) 0x10A1A0: vector (stl_vector.h:603)
+|             ->80.92% (384,000B) 0x10A1A0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+|               ->80.92% (384,000B) 0x10A1A0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+|                 ->80.92% (384,000B) 0x109D3C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+|                   ->80.92% (384,000B) 0x109D3C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+|                     ->80.92% (384,000B) 0x109D3C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+|                       ->80.92% (384,000B) 0x109D3C: _M_fill_initialize (stl_vector.h:1707)
+|                         ->80.92% (384,000B) 0x109D3C: vector (stl_vector.h:572)
+|                           ->80.92% (384,000B) 0x109D3C: generate_matrix(unsigned long, unsigned long) (matrix_mul_pthreads.cpp:21)
+|                             ->80.92% (384,000B) 0x109469: main (matrix_mul_pthreads.cpp:69)
+|                               
+->15.54% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->15.54% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->15.54% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->15.54% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->15.54% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->02.53% (12,000B) 0x109D14: allocate (new_allocator.h:151)
+| ->02.53% (12,000B) 0x109D14: allocate (alloc_traits.h:482)
+|   ->02.53% (12,000B) 0x109D14: _M_allocate (stl_vector.h:381)
+|     ->02.53% (12,000B) 0x109D14: _M_allocate (stl_vector.h:378)
+|       ->02.53% (12,000B) 0x109D14: _M_create_storage (stl_vector.h:398)
+|         ->02.53% (12,000B) 0x109D14: _Vector_base (stl_vector.h:335)
+|           ->02.53% (12,000B) 0x109D14: vector (stl_vector.h:571)
+|             ->02.53% (12,000B) 0x109D14: generate_matrix(unsigned long, unsigned long) (matrix_mul_pthreads.cpp:21)
+|               ->02.53% (12,000B) 0x109469: main (matrix_mul_pthreads.cpp:69)
+|                 
+->00.84% (4,000B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  5      2,047,769          602,776          601,728         1,048            0
+  6      2,063,097          731,032          729,728         1,304            0
+  7      2,078,417          859,288          857,728         1,560            0
+  8      2,093,745          987,544          985,728         1,816            0
+  9      2,109,065        1,115,800        1,113,728         2,072            0
+ 10      2,124,393        1,244,056        1,241,728         2,328            0
+ 11      2,139,713        1,372,312        1,369,728         2,584            0
+ 12      2,155,041        1,500,568        1,497,728         2,840            0
+ 13      2,176,109        1,676,920        1,673,728         3,192            0
+99.81% (1,673,728B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->94.46% (1,584,000B) 0x10A1A0: allocate (new_allocator.h:151)
+| ->94.46% (1,584,000B) 0x10A1A0: allocate (alloc_traits.h:482)
+|   ->94.46% (1,584,000B) 0x10A1A0: _M_allocate (stl_vector.h:381)
+|     ->94.46% (1,584,000B) 0x10A1A0: _M_allocate (stl_vector.h:378)
+|       ->94.46% (1,584,000B) 0x10A1A0: _M_create_storage (stl_vector.h:398)
+|         ->94.46% (1,584,000B) 0x10A1A0: _Vector_base (stl_vector.h:335)
+|           ->94.46% (1,584,000B) 0x10A1A0: vector (stl_vector.h:603)
+|             ->94.46% (1,584,000B) 0x10A1A0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+|               ->94.46% (1,584,000B) 0x10A1A0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+|                 ->94.46% (1,584,000B) 0x109D3C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+|                   ->94.46% (1,584,000B) 0x109D3C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+|                     ->94.46% (1,584,000B) 0x109D3C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+|                       ->94.46% (1,584,000B) 0x109D3C: _M_fill_initialize (stl_vector.h:1707)
+|                         ->94.46% (1,584,000B) 0x109D3C: vector (stl_vector.h:572)
+|                           ->94.46% (1,584,000B) 0x109D3C: generate_matrix(unsigned long, unsigned long) (matrix_mul_pthreads.cpp:21)
+|                             ->94.46% (1,584,000B) 0x109469: main (matrix_mul_pthreads.cpp:69)
+|                               
+->04.40% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->04.40% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->04.40% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->04.40% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->04.40% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.95% (16,000B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 14      2,191,437        1,805,176        1,801,728         3,448            0
+ 15      2,202,925        1,901,368        1,897,728         3,640            0
+ 16      2,226,421        2,093,752        2,089,728         4,024            0
+99.81% (2,089,728B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->95.52% (2,000,000B) 0x10A1A0: allocate (new_allocator.h:151)
+| ->95.52% (2,000,000B) 0x10A1A0: allocate (alloc_traits.h:482)
+|   ->95.52% (2,000,000B) 0x10A1A0: _M_allocate (stl_vector.h:381)
+|     ->95.52% (2,000,000B) 0x10A1A0: _M_allocate (stl_vector.h:378)
+|       ->95.52% (2,000,000B) 0x10A1A0: _M_create_storage (stl_vector.h:398)
+|         ->95.52% (2,000,000B) 0x10A1A0: _Vector_base (stl_vector.h:335)
+|           ->95.52% (2,000,000B) 0x10A1A0: vector (stl_vector.h:603)
+|             ->95.52% (2,000,000B) 0x10A1A0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+|               ->95.52% (2,000,000B) 0x10A1A0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+|                 ->95.52% (2,000,000B) 0x109D3C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+|                   ->95.52% (2,000,000B) 0x109D3C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+|                     ->95.52% (2,000,000B) 0x109D3C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+|                       ->95.52% (2,000,000B) 0x109D3C: _M_fill_initialize (stl_vector.h:1707)
+|                         ->95.52% (2,000,000B) 0x109D3C: vector (stl_vector.h:572)
+|                           ->95.52% (2,000,000B) 0x109D3C: generate_matrix(unsigned long, unsigned long) (matrix_mul_pthreads.cpp:21)
+|                             ->95.52% (2,000,000B) 0x109469: main (matrix_mul_pthreads.cpp:69)
+|                               
+->03.52% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->03.52% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->03.52% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->03.52% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->03.52% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.76% (16,000B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 17     27,195,595        2,093,752        2,089,728         4,024            0
+ 18     27,218,889        2,270,088        2,265,728         4,360            0
+ 19     27,234,209        2,398,344        2,393,728         4,616            0
+ 20     27,249,537        2,526,600        2,521,728         4,872            0
+ 21     27,264,857        2,654,856        2,649,728         5,128            0
+ 22     27,280,185        2,783,112        2,777,728         5,384            0
+ 23     27,295,505        2,911,368        2,905,728         5,640            0
+ 24     27,310,833        3,039,624        3,033,728         5,896            0
+ 25     27,329,985        3,199,944        3,193,728         6,216            0
+ 26     27,344,355        3,320,184        3,313,728         6,456            0
+ 27     27,358,717        3,440,424        3,433,728         6,696            0
+99.81% (3,433,728B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->96.85% (3,332,000B) 0x10A1A0: allocate (new_allocator.h:151)
+| ->96.85% (3,332,000B) 0x10A1A0: allocate (alloc_traits.h:482)
+|   ->96.85% (3,332,000B) 0x10A1A0: _M_allocate (stl_vector.h:381)
+|     ->96.85% (3,332,000B) 0x10A1A0: _M_allocate (stl_vector.h:378)
+|       ->96.85% (3,332,000B) 0x10A1A0: _M_create_storage (stl_vector.h:398)
+|         ->96.85% (3,332,000B) 0x10A1A0: _Vector_base (stl_vector.h:335)
+|           ->96.85% (3,332,000B) 0x10A1A0: vector (stl_vector.h:603)
+|             ->96.85% (3,332,000B) 0x10A1A0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+|               ->96.85% (3,332,000B) 0x10A1A0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+|                 ->96.85% (3,332,000B) 0x109D3C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+|                   ->96.85% (3,332,000B) 0x109D3C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+|                     ->96.85% (3,332,000B) 0x109D3C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+|                       ->96.85% (3,332,000B) 0x109D3C: _M_fill_initialize (stl_vector.h:1707)
+|                         ->96.85% (3,332,000B) 0x109D3C: vector (stl_vector.h:572)
+|                           ->96.85% (3,332,000B) 0x109D3C: generate_matrix(unsigned long, unsigned long) (matrix_mul_pthreads.cpp:21)
+|                             ->58.13% (2,000,000B) 0x109469: main (matrix_mul_pthreads.cpp:69)
+|                             | 
+|                             ->38.72% (1,332,000B) 0x10947B: main (matrix_mul_pthreads.cpp:70)
+|                               
+->02.14% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->02.14% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->02.14% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->02.14% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->02.14% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.81% (28,000B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 28     27,373,087        3,560,664        3,553,728         6,936            0
+ 29     27,387,449        3,680,904        3,673,728         7,176            0
+ 30     27,401,819        3,801,144        3,793,728         7,416            0
+ 31     27,416,181        3,921,384        3,913,728         7,656            0
+ 32     27,439,198        4,109,760        4,101,728         8,032            0
+99.80% (4,101,728B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.33% (4,000,000B) 0x10A1A0: allocate (new_allocator.h:151)
+| ->97.33% (4,000,000B) 0x10A1A0: allocate (alloc_traits.h:482)
+|   ->97.33% (4,000,000B) 0x10A1A0: _M_allocate (stl_vector.h:381)
+|     ->97.33% (4,000,000B) 0x10A1A0: _M_allocate (stl_vector.h:378)
+|       ->97.33% (4,000,000B) 0x10A1A0: _M_create_storage (stl_vector.h:398)
+|         ->97.33% (4,000,000B) 0x10A1A0: _Vector_base (stl_vector.h:335)
+|           ->97.33% (4,000,000B) 0x10A1A0: vector (stl_vector.h:603)
+|             ->97.33% (4,000,000B) 0x10A1A0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+|               ->97.33% (4,000,000B) 0x10A1A0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+|                 ->97.33% (4,000,000B) 0x109D3C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+|                   ->97.33% (4,000,000B) 0x109D3C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+|                     ->97.33% (4,000,000B) 0x109D3C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+|                       ->97.33% (4,000,000B) 0x109D3C: _M_fill_initialize (stl_vector.h:1707)
+|                         ->97.33% (4,000,000B) 0x109D3C: vector (stl_vector.h:572)
+|                           ->97.33% (4,000,000B) 0x109D3C: generate_matrix(unsigned long, unsigned long) (matrix_mul_pthreads.cpp:21)
+|                             ->48.66% (2,000,000B) 0x109469: main (matrix_mul_pthreads.cpp:69)
+|                             | 
+|                             ->48.66% (2,000,000B) 0x10947B: main (matrix_mul_pthreads.cpp:70)
+|                               
+->01.79% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->01.79% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->01.79% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->01.79% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->01.79% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.68% (28,000B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 33     52,410,500        4,109,760        4,101,728         8,032            0
+ 34     52,417,998        4,153,832        4,145,728         8,104            0
+ 35     52,439,545        4,334,192        4,325,728         8,464            0
+ 36     52,453,907        4,454,432        4,445,728         8,704            0
+ 37     52,468,277        4,574,672        4,565,728         8,944            0
+ 38     52,482,639        4,694,912        4,685,728         9,184            0
+ 39     52,497,009        4,815,152        4,805,728         9,424            0
+ 40     52,518,556        4,995,512        4,985,728         9,784            0
+ 41     52,532,926        5,115,752        5,105,728        10,024            0
+ 42     52,547,288        5,235,992        5,225,728        10,264            0
+99.80% (5,225,728B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.63% (5,112,000B) 0x10A1A0: allocate (new_allocator.h:151)
+| ->97.63% (5,112,000B) 0x10A1A0: allocate (alloc_traits.h:482)
+|   ->97.63% (5,112,000B) 0x10A1A0: _M_allocate (stl_vector.h:381)
+|     ->97.63% (5,112,000B) 0x10A1A0: _M_allocate (stl_vector.h:378)
+|       ->97.63% (5,112,000B) 0x10A1A0: _M_create_storage (stl_vector.h:398)
+|         ->97.63% (5,112,000B) 0x10A1A0: _Vector_base (stl_vector.h:335)
+|           ->97.63% (5,112,000B) 0x10A1A0: vector (stl_vector.h:603)
+|             ->97.63% (5,112,000B) 0x10A1A0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+|               ->97.63% (5,112,000B) 0x10A1A0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+|                 ->76.39% (4,000,000B) 0x109D3C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+|                 | ->76.39% (4,000,000B) 0x109D3C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+|                 |   ->76.39% (4,000,000B) 0x109D3C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+|                 |     ->76.39% (4,000,000B) 0x109D3C: _M_fill_initialize (stl_vector.h:1707)
+|                 |       ->76.39% (4,000,000B) 0x109D3C: vector (stl_vector.h:572)
+|                 |         ->76.39% (4,000,000B) 0x109D3C: generate_matrix(unsigned long, unsigned long) (matrix_mul_pthreads.cpp:21)
+|                 |           ->38.20% (2,000,000B) 0x109469: main (matrix_mul_pthreads.cpp:69)
+|                 |           | 
+|                 |           ->38.20% (2,000,000B) 0x10947B: main (matrix_mul_pthreads.cpp:70)
+|                 |             
+|                 ->21.24% (1,112,000B) 0x109907: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+|                   ->21.24% (1,112,000B) 0x109907: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+|                     ->21.24% (1,112,000B) 0x109907: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+|                       ->21.24% (1,112,000B) 0x109907: _M_fill_initialize (stl_vector.h:1707)
+|                         ->21.24% (1,112,000B) 0x109907: vector (stl_vector.h:572)
+|                           ->21.24% (1,112,000B) 0x109907: pthread_multiply(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, unsigned long) (matrix_mul_pthreads.cpp:45)
+|                             ->21.24% (1,112,000B) 0x1094AC: main (matrix_mul_pthreads.cpp:76)
+|                               
+->01.41% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->01.41% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->01.41% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->01.41% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->01.41% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.76% (40,000B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 43     52,561,658        5,356,232        5,345,728        10,504            0
+ 44     52,576,020        5,476,472        5,465,728        10,744            0
+ 45     52,590,390        5,596,712        5,585,728        10,984            0
+ 46     52,604,752        5,716,952        5,705,728        11,224            0
+ 47     52,619,122        5,837,192        5,825,728        11,464            0
+99.80% (5,825,728B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.86% (5,712,000B) 0x10A1A0: allocate (new_allocator.h:151)
+| ->97.86% (5,712,000B) 0x10A1A0: allocate (alloc_traits.h:482)
+|   ->97.86% (5,712,000B) 0x10A1A0: _M_allocate (stl_vector.h:381)
+|     ->97.86% (5,712,000B) 0x10A1A0: _M_allocate (stl_vector.h:378)
+|       ->97.86% (5,712,000B) 0x10A1A0: _M_create_storage (stl_vector.h:398)
+|         ->97.86% (5,712,000B) 0x10A1A0: _Vector_base (stl_vector.h:335)
+|           ->97.86% (5,712,000B) 0x10A1A0: vector (stl_vector.h:603)
+|             ->97.86% (5,712,000B) 0x10A1A0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+|               ->97.86% (5,712,000B) 0x10A1A0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+|                 ->68.53% (4,000,000B) 0x109D3C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+|                 | ->68.53% (4,000,000B) 0x109D3C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+|                 |   ->68.53% (4,000,000B) 0x109D3C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+|                 |     ->68.53% (4,000,000B) 0x109D3C: _M_fill_initialize (stl_vector.h:1707)
+|                 |       ->68.53% (4,000,000B) 0x109D3C: vector (stl_vector.h:572)
+|                 |         ->68.53% (4,000,000B) 0x109D3C: generate_matrix(unsigned long, unsigned long) (matrix_mul_pthreads.cpp:21)
+|                 |           ->34.26% (2,000,000B) 0x109469: main (matrix_mul_pthreads.cpp:69)
+|                 |           | 
+|                 |           ->34.26% (2,000,000B) 0x10947B: main (matrix_mul_pthreads.cpp:70)
+|                 |             
+|                 ->29.33% (1,712,000B) 0x109907: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+|                   ->29.33% (1,712,000B) 0x109907: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+|                     ->29.33% (1,712,000B) 0x109907: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+|                       ->29.33% (1,712,000B) 0x109907: _M_fill_initialize (stl_vector.h:1707)
+|                         ->29.33% (1,712,000B) 0x109907: vector (stl_vector.h:572)
+|                           ->29.33% (1,712,000B) 0x109907: pthread_multiply(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, unsigned long) (matrix_mul_pthreads.cpp:45)
+|                             ->29.33% (1,712,000B) 0x1094AC: main (matrix_mul_pthreads.cpp:76)
+|                               
+->01.26% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->01.26% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->01.26% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->01.26% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->01.26% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.69% (40,000B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 48     52,640,669        6,017,552        6,005,728        11,824            0
+ 49     52,647,854        6,077,672        6,065,728        11,944            0
+ 50     52,654,106        6,125,768        6,113,728        12,040            0
+99.80% (6,113,728B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.95% (6,000,000B) 0x10A1A0: allocate (new_allocator.h:151)
+| ->97.95% (6,000,000B) 0x10A1A0: allocate (alloc_traits.h:482)
+|   ->97.95% (6,000,000B) 0x10A1A0: _M_allocate (stl_vector.h:381)
+|     ->97.95% (6,000,000B) 0x10A1A0: _M_allocate (stl_vector.h:378)
+|       ->97.95% (6,000,000B) 0x10A1A0: _M_create_storage (stl_vector.h:398)
+|         ->97.95% (6,000,000B) 0x10A1A0: _Vector_base (stl_vector.h:335)
+|           ->97.95% (6,000,000B) 0x10A1A0: vector (stl_vector.h:603)
+|             ->97.95% (6,000,000B) 0x10A1A0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+|               ->97.95% (6,000,000B) 0x10A1A0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+|                 ->65.30% (4,000,000B) 0x109D3C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+|                 | ->65.30% (4,000,000B) 0x109D3C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+|                 |   ->65.30% (4,000,000B) 0x109D3C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+|                 |     ->65.30% (4,000,000B) 0x109D3C: _M_fill_initialize (stl_vector.h:1707)
+|                 |       ->65.30% (4,000,000B) 0x109D3C: vector (stl_vector.h:572)
+|                 |         ->65.30% (4,000,000B) 0x109D3C: generate_matrix(unsigned long, unsigned long) (matrix_mul_pthreads.cpp:21)
+|                 |           ->32.65% (2,000,000B) 0x109469: main (matrix_mul_pthreads.cpp:69)
+|                 |           | 
+|                 |           ->32.65% (2,000,000B) 0x10947B: main (matrix_mul_pthreads.cpp:70)
+|                 |             
+|                 ->32.65% (2,000,000B) 0x109907: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+|                   ->32.65% (2,000,000B) 0x109907: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+|                     ->32.65% (2,000,000B) 0x109907: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+|                       ->32.65% (2,000,000B) 0x109907: _M_fill_initialize (stl_vector.h:1707)
+|                         ->32.65% (2,000,000B) 0x109907: vector (stl_vector.h:572)
+|                           ->32.65% (2,000,000B) 0x109907: pthread_multiply(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, unsigned long) (matrix_mul_pthreads.cpp:45)
+|                             ->32.65% (2,000,000B) 0x1094AC: main (matrix_mul_pthreads.cpp:76)
+|                               
+->01.20% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->01.20% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->01.20% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->01.20% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->01.20% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.65% (40,000B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 51     63,678,165        6,124,344        6,112,240        12,104            0
+ 52  2,807,427,027        6,124,344        6,112,240        12,104            0
+ 53  2,807,445,274        6,120,032        6,107,968        12,064            0
+ 54  2,807,452,513        5,611,016        5,599,968        11,048            0
+ 55  2,807,459,752        5,102,000        5,091,968        10,032            0
+ 56  2,807,466,991        4,592,984        4,583,968         9,016            0
+ 57  2,807,474,186        4,079,976        4,071,968         8,008            0
+ 58  2,807,481,425        3,570,960        3,563,968         6,992            0
+ 59  2,807,488,664        3,061,944        3,055,968         5,976            0
+ 60  2,807,495,903        2,552,928        2,547,968         4,960            0
+99.81% (2,547,968B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->95.89% (2,448,000B) 0x10A1A0: allocate (new_allocator.h:151)
+| ->95.89% (2,448,000B) 0x10A1A0: allocate (alloc_traits.h:482)
+|   ->95.89% (2,448,000B) 0x10A1A0: _M_allocate (stl_vector.h:381)
+|     ->95.89% (2,448,000B) 0x10A1A0: _M_allocate (stl_vector.h:378)
+|       ->95.89% (2,448,000B) 0x10A1A0: _M_create_storage (stl_vector.h:398)
+|         ->95.89% (2,448,000B) 0x10A1A0: _Vector_base (stl_vector.h:335)
+|           ->95.89% (2,448,000B) 0x10A1A0: vector (stl_vector.h:603)
+|             ->95.89% (2,448,000B) 0x10A1A0: _Construct<std::vector<double>, const std::vector<double, std::allocator<double> >&> (stl_construct.h:119)
+|               ->95.89% (2,448,000B) 0x10A1A0: std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&) (stl_uninitialized.h:267)
+|                 ->95.89% (2,448,000B) 0x109D3C: __uninit_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:284)
+|                 | ->95.89% (2,448,000B) 0x109D3C: uninitialized_fill_n<std::vector<double>*, long unsigned int, std::vector<double> > (stl_uninitialized.h:327)
+|                 |   ->95.89% (2,448,000B) 0x109D3C: __uninitialized_fill_n_a<std::vector<double>*, long unsigned int, std::vector<double>, std::vector<double> > (stl_uninitialized.h:472)
+|                 |     ->95.89% (2,448,000B) 0x109D3C: _M_fill_initialize (stl_vector.h:1707)
+|                 |       ->95.89% (2,448,000B) 0x109D3C: vector (stl_vector.h:572)
+|                 |         ->95.89% (2,448,000B) 0x109D3C: generate_matrix(unsigned long, unsigned long) (matrix_mul_pthreads.cpp:21)
+|                 |           ->78.34% (2,000,000B) 0x109469: main (matrix_mul_pthreads.cpp:69)
+|                 |           | 
+|                 |           ->17.55% (448,000B) 0x10947B: main (matrix_mul_pthreads.cpp:70)
+|                 |             
+|                 ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                 
+->02.89% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->02.89% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->02.89% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->02.89% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->02.89% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->01.03% (26,240B) in 8 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 61  2,807,503,098        2,039,920        2,035,968         3,952            0
+ 62  2,807,510,337        1,530,904        1,527,968         2,936            0
+ 63  2,807,517,576        1,021,888        1,019,968         1,920            0
+ 64  2,807,524,815          512,872          511,968           904            0
+ 65  2,807,543,458            2,280            2,240            40            0

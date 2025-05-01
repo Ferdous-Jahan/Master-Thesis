@@ -8,18 +8,18 @@ echo "implementation,cpp_standard,run,execution_time_seconds" > execution_times.
 
 # List of C++ files
 files=(
-  "matrix_multiplication_execution_policy_par.cpp"
-  "matrix_multiplication_execution_policy_par_unseq.cpp"
-  "matrix_multiplication_threads.cpp"
-  "matrix_multiplication_pthreads.cpp"
+  "matrix_mul_execution_policy_par.cpp"
+  "matrix_mul_execution_policy_par_unseq.cpp"
+  "matrix_mul_threads.cpp"
+  "matrix_mul_pthreads.cpp"
 )
 
 # Corresponding executable names
 executables=(
-  "matrix_multiplication_par"
-  "matrix_multiplication_par_unseq"
-  "matrix_multiplication_threads"
-  "matrix_multiplication_pthreads"
+  "matrix_mul_par"
+  "matrix_mul_par_unseq"
+  "matrix_mul_threads"
+  "matrix_mul_pthreads"
 )
 
 # Compiler flags
@@ -69,7 +69,7 @@ for cpp_version in c++17 c++23; do
 done
 
 # Cleanup binaries
-rm matrix_multiplication_par_* matrix_multiplication_par_unseq_* matrix_multiplication_threads_* matrix_multiplication_pthreads_*
+rm matrix_mul_par_* matrix_mul_par_unseq_* matrix_mul_threads_* matrix_mul_pthreads_*
 
 
 # Done
