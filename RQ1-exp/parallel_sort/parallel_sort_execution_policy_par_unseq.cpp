@@ -21,7 +21,6 @@ int main() {
 
     auto start = std::chrono::high_resolution_clock::now();
 
-    // Sorting using C++17 execution policy (parallel unsequenced)
     std::sort(std::execution::par_unseq, data.begin(), data.end());
 
     auto end = std::chrono::high_resolution_clock::now();
