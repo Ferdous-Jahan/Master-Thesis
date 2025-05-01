@@ -1,0 +1,927 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 441  of event 'cycles:P'
+# Event count (approx.): 316155929
+#
+# Children      Self  Command          Shared Object                       Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+# ........  ........  ...............  ..................................  .......................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    72.71%    71.32%  parallel_sort_p  parallel_sort_par_unseq_c++23_perf  [.] void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+            |          
+            |--4.46%--0x600bd000658b7
+            |          void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+            |          
+            |--2.72%--0x80df2000968bf
+            |          void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+            |          
+            |--1.83%--0x3fb6c0003619a
+            |          void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+            |          
+            |--1.57%--0x9d853000d4032
+            |          void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+            |          
+            |--1.40%--void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+            |          |          
+            |           --1.15%--asm_sysvec_apic_timer_interrupt
+            |                     sysvec_apic_timer_interrupt
+            |                     |          
+            |                      --1.14%--__sysvec_apic_timer_interrupt
+            |                                hrtimer_interrupt
+            |                                __hrtimer_run_queues
+            |                                tick_nohz_handler
+            |                                update_process_times
+            |                                sched_tick
+            |                                |          
+            |                                 --0.91%--task_tick_fair
+            |                                           |          
+            |                                            --0.67%--update_curr
+            |          
+            |--1.33%--0x2ed8200026522
+            |          void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+            |          
+            |--1.17%--0x9d853000a1689
+            |          void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+            |          
+            |--0.96%--0x53580001278f
+            |          void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+            |          
+            |--0.93%--0x5fabf000600bd
+            |          void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+            |          
+            |--0.79%--0x31ffe000337db
+            |          void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+            |          
+             --0.57%--0xc8e5e000c72b0
+                       void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+
+    15.41%     0.00%  parallel_sort_p  [unknown]                           [.] 0000000000000000
+            |
+            ---0
+               |          
+               |--14.27%--main
+               |          
+                --1.14%--int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]
+
+    14.51%    13.81%  parallel_sort_p  parallel_sort_par_unseq_c++23_perf  [.] main
+            |          
+            |--13.81%--0
+            |          main
+            |          
+             --0.70%--main
+
+     4.69%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000600bd000658b7
+            |
+            ---0x600bd000658b7
+               void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+
+     4.27%     0.00%  parallel_sort_p  parallel_sort_par_unseq_c++23_perf  [.] _start
+            |
+            ---_start
+               __libc_start_main@@GLIBC_2.34
+               __memset_avx2_unaligned_erms
+               |          
+                --3.31%--asm_exc_page_fault
+                          |          
+                           --3.09%--exc_page_fault
+                                     |          
+                                      --2.65%--do_user_addr_fault
+                                                |          
+                                                |--2.11%--handle_mm_fault
+                                                |          |          
+                                                |           --1.88%--__handle_mm_fault
+                                                |                     handle_pte_fault
+                                                |                     do_anonymous_page
+                                                |                     |          
+                                                |                      --1.05%--alloc_anon_folio
+                                                |                                |          
+                                                |                                 --0.58%--vma_alloc_folio_noprof
+                                                |                                           folio_alloc_mpol_noprof
+                                                |                                           alloc_pages_mpol_noprof
+                                                |                                           __alloc_pages_noprof
+                                                |                                           get_page_from_freelist
+                                                |          
+                                                 --0.54%--lock_vma_under_rcu
+
+     4.27%     0.00%  parallel_sort_p  libc.so.6                           [.] __libc_start_main@@GLIBC_2.34
+            |
+            ---__libc_start_main@@GLIBC_2.34
+               __memset_avx2_unaligned_erms
+               |          
+                --3.31%--asm_exc_page_fault
+                          |          
+                           --3.09%--exc_page_fault
+                                     |          
+                                      --2.65%--do_user_addr_fault
+                                                |          
+                                                |--2.11%--handle_mm_fault
+                                                |          |          
+                                                |           --1.88%--__handle_mm_fault
+                                                |                     handle_pte_fault
+                                                |                     do_anonymous_page
+                                                |                     |          
+                                                |                      --1.05%--alloc_anon_folio
+                                                |                                |          
+                                                |                                 --0.58%--vma_alloc_folio_noprof
+                                                |                                           folio_alloc_mpol_noprof
+                                                |                                           alloc_pages_mpol_noprof
+                                                |                                           __alloc_pages_noprof
+                                                |                                           get_page_from_freelist
+                                                |          
+                                                 --0.54%--lock_vma_under_rcu
+
+     4.27%     0.22%  parallel_sort_p  libc.so.6                           [.] __memset_avx2_unaligned_erms
+            |          
+             --4.04%--__memset_avx2_unaligned_erms
+                       |          
+                        --3.09%--asm_exc_page_fault
+                                  exc_page_fault
+                                  |          
+                                   --2.65%--do_user_addr_fault
+                                             |          
+                                             |--2.11%--handle_mm_fault
+                                             |          |          
+                                             |           --1.88%--__handle_mm_fault
+                                             |                     handle_pte_fault
+                                             |                     do_anonymous_page
+                                             |                     |          
+                                             |                      --1.05%--alloc_anon_folio
+                                             |                                |          
+                                             |                                 --0.58%--vma_alloc_folio_noprof
+                                             |                                           folio_alloc_mpol_noprof
+                                             |                                           alloc_pages_mpol_noprof
+                                             |                                           __alloc_pages_noprof
+                                             |                                           get_page_from_freelist
+                                             |          
+                                              --0.54%--lock_vma_under_rcu
+
+     4.04%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] asm_exc_page_fault
+            |
+            ---asm_exc_page_fault
+               |          
+                --3.82%--exc_page_fault
+                          |          
+                           --3.38%--do_user_addr_fault
+                                     |          
+                                     |--2.84%--handle_mm_fault
+                                     |          |          
+                                     |           --2.61%--__handle_mm_fault
+                                     |                     handle_pte_fault
+                                     |                     |          
+                                     |                     |--1.88%--do_anonymous_page
+                                     |                     |          |          
+                                     |                     |           --1.05%--alloc_anon_folio
+                                     |                     |                     |          
+                                     |                     |                      --0.58%--vma_alloc_folio_noprof
+                                     |                     |                                folio_alloc_mpol_noprof
+                                     |                     |                                alloc_pages_mpol_noprof
+                                     |                     |                                __alloc_pages_noprof
+                                     |                     |                                get_page_from_freelist
+                                     |                     |          
+                                     |                      --0.73%--do_fault
+                                     |          
+                                      --0.54%--lock_vma_under_rcu
+
+     3.82%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] exc_page_fault
+            |
+            ---exc_page_fault
+               |          
+                --3.38%--do_user_addr_fault
+                          |          
+                          |--2.84%--handle_mm_fault
+                          |          |          
+                          |           --2.61%--__handle_mm_fault
+                          |                     handle_pte_fault
+                          |                     |          
+                          |                     |--1.88%--do_anonymous_page
+                          |                     |          |          
+                          |                     |           --1.05%--alloc_anon_folio
+                          |                     |                     |          
+                          |                     |                      --0.58%--vma_alloc_folio_noprof
+                          |                     |                                folio_alloc_mpol_noprof
+                          |                     |                                alloc_pages_mpol_noprof
+                          |                     |                                __alloc_pages_noprof
+                          |                     |                                get_page_from_freelist
+                          |                     |          
+                          |                      --0.73%--do_fault
+                          |          
+                           --0.54%--lock_vma_under_rcu
+
+     3.80%     2.48%  parallel_sort_p  parallel_sort_par_unseq_c++23_perf  [.] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+            |          
+             --1.32%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::operator()()
+
+     3.58%     3.58%  parallel_sort_p  parallel_sort_par_unseq_c++23_perf  [.] int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]
+            |          
+             --1.14%--0
+                       int std::uniform_int_distribution<int>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_int_distribution<int>::param_type const&) [clone .isra.0]
+
+     3.38%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] do_user_addr_fault
+            |
+            ---do_user_addr_fault
+               |          
+               |--2.84%--handle_mm_fault
+               |          |          
+               |           --2.61%--__handle_mm_fault
+               |                     handle_pte_fault
+               |                     |          
+               |                     |--1.88%--do_anonymous_page
+               |                     |          |          
+               |                     |           --1.05%--alloc_anon_folio
+               |                     |                     |          
+               |                     |                      --0.58%--vma_alloc_folio_noprof
+               |                     |                                folio_alloc_mpol_noprof
+               |                     |                                alloc_pages_mpol_noprof
+               |                     |                                __alloc_pages_noprof
+               |                     |                                get_page_from_freelist
+               |                     |          
+               |                      --0.73%--do_fault
+               |          
+                --0.54%--lock_vma_under_rcu
+
+     2.84%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] handle_mm_fault
+            |
+            ---handle_mm_fault
+               |          
+                --2.61%--__handle_mm_fault
+                          handle_pte_fault
+                          |          
+                          |--1.88%--do_anonymous_page
+                          |          |          
+                          |           --1.05%--alloc_anon_folio
+                          |                     |          
+                          |                      --0.58%--vma_alloc_folio_noprof
+                          |                                folio_alloc_mpol_noprof
+                          |                                alloc_pages_mpol_noprof
+                          |                                __alloc_pages_noprof
+                          |                                get_page_from_freelist
+                          |          
+                           --0.73%--do_fault
+
+     2.72%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00080df2000968bf
+            |
+            ---0x80df2000968bf
+               void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+
+     2.61%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __handle_mm_fault
+            |
+            ---__handle_mm_fault
+               handle_pte_fault
+               |          
+               |--1.88%--do_anonymous_page
+               |          |          
+               |           --1.05%--alloc_anon_folio
+               |                     |          
+               |                      --0.58%--vma_alloc_folio_noprof
+               |                                folio_alloc_mpol_noprof
+               |                                alloc_pages_mpol_noprof
+               |                                __alloc_pages_noprof
+               |                                get_page_from_freelist
+               |          
+                --0.73%--do_fault
+
+     2.61%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] handle_pte_fault
+            |
+            ---handle_pte_fault
+               |          
+               |--1.88%--do_anonymous_page
+               |          |          
+               |           --1.05%--alloc_anon_folio
+               |                     |          
+               |                      --0.58%--vma_alloc_folio_noprof
+               |                                folio_alloc_mpol_noprof
+               |                                alloc_pages_mpol_noprof
+               |                                __alloc_pages_noprof
+               |                                get_page_from_freelist
+               |          
+                --0.73%--do_fault
+
+     2.15%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] asm_sysvec_apic_timer_interrupt
+            |
+            ---asm_sysvec_apic_timer_interrupt
+               |          
+                --1.71%--sysvec_apic_timer_interrupt
+                          |          
+                           --1.70%--__sysvec_apic_timer_interrupt
+                                     hrtimer_interrupt
+                                     |          
+                                      --1.38%--__hrtimer_run_queues
+                                                tick_nohz_handler
+                                                update_process_times
+                                                |          
+                                                 --1.14%--sched_tick
+                                                           |          
+                                                            --0.91%--task_tick_fair
+                                                                      |          
+                                                                       --0.67%--update_curr
+
+     1.88%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] do_anonymous_page
+            |
+            ---do_anonymous_page
+               |          
+                --1.05%--alloc_anon_folio
+                          |          
+                           --0.58%--vma_alloc_folio_noprof
+                                     folio_alloc_mpol_noprof
+                                     alloc_pages_mpol_noprof
+                                     __alloc_pages_noprof
+                                     get_page_from_freelist
+
+     1.83%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0003fb6c0003619a
+            |
+            ---0x3fb6c0003619a
+               void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+
+     1.71%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] sysvec_apic_timer_interrupt
+            |
+            ---sysvec_apic_timer_interrupt
+               |          
+                --1.70%--__sysvec_apic_timer_interrupt
+                          hrtimer_interrupt
+                          |          
+                           --1.38%--__hrtimer_run_queues
+                                     tick_nohz_handler
+                                     update_process_times
+                                     |          
+                                      --1.14%--sched_tick
+                                                |          
+                                                 --0.91%--task_tick_fair
+                                                           |          
+                                                            --0.67%--update_curr
+
+     1.70%     0.32%  parallel_sort_p  [kernel.kallsyms]                   [k] hrtimer_interrupt
+            |          
+             --1.38%--hrtimer_interrupt
+                       __hrtimer_run_queues
+                       tick_nohz_handler
+                       update_process_times
+                       |          
+                        --1.14%--sched_tick
+                                  |          
+                                   --0.91%--task_tick_fair
+                                             |          
+                                              --0.67%--update_curr
+
+     1.70%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __sysvec_apic_timer_interrupt
+            |
+            ---__sysvec_apic_timer_interrupt
+               hrtimer_interrupt
+               |          
+                --1.38%--__hrtimer_run_queues
+                          tick_nohz_handler
+                          update_process_times
+                          |          
+                           --1.14%--sched_tick
+                                     |          
+                                      --0.91%--task_tick_fair
+                                                |          
+                                                 --0.67%--update_curr
+
+     1.57%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0009d853000d4032
+            |
+            ---0x9d853000d4032
+               void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+
+     1.55%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0002ed8200026522
+            |
+            ---0x2ed8200026522
+               void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+
+     1.38%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __hrtimer_run_queues
+            |
+            ---__hrtimer_run_queues
+               tick_nohz_handler
+               update_process_times
+               |          
+                --1.14%--sched_tick
+                          |          
+                           --0.91%--task_tick_fair
+                                     |          
+                                      --0.67%--update_curr
+
+     1.38%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] tick_nohz_handler
+            |
+            ---tick_nohz_handler
+               update_process_times
+               |          
+                --1.14%--sched_tick
+                          |          
+                           --0.91%--task_tick_fair
+                                     |          
+                                      --0.67%--update_curr
+
+     1.38%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] update_process_times
+            |
+            ---update_process_times
+               |          
+                --1.14%--sched_tick
+                          |          
+                           --0.91%--task_tick_fair
+                                     |          
+                                      --0.67%--update_curr
+
+     1.17%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0009d853000a1689
+            |
+            ---0x9d853000a1689
+               void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+
+     1.14%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] sched_tick
+            |
+            ---sched_tick
+               |          
+                --0.91%--task_tick_fair
+                          |          
+                           --0.67%--update_curr
+
+     1.13%     0.00%  parallel_sort_p  ld-linux-x86-64.so.2                [.] _dl_start_user
+            |
+            ---_dl_start_user
+               |          
+                --0.77%--_dl_start
+                          _dl_sysdep_start
+                          dl_main
+
+     1.05%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] alloc_anon_folio
+            |
+            ---alloc_anon_folio
+               |          
+                --0.58%--vma_alloc_folio_noprof
+                          folio_alloc_mpol_noprof
+                          alloc_pages_mpol_noprof
+                          __alloc_pages_noprof
+                          get_page_from_freelist
+
+     0.96%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000053580001278f
+            |
+            ---0x53580001278f
+               void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+
+     0.93%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0005fabf000600bd
+            |
+            ---0x5fabf000600bd
+               void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+
+     0.91%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] task_tick_fair
+            |
+            ---task_tick_fair
+               |          
+                --0.67%--update_curr
+
+     0.90%     0.90%  parallel_sort_p  parallel_sort_par_unseq_c++23_perf  [.] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+     0.88%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               x64_sys_call
+
+     0.88%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] do_syscall_64
+            |
+            ---do_syscall_64
+               x64_sys_call
+
+     0.88%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] x64_sys_call
+            |
+            ---x64_sys_call
+
+     0.79%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00031ffe000337db
+            |
+            ---0x31ffe000337db
+               void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+
+     0.77%     0.00%  parallel_sort_p  ld-linux-x86-64.so.2                [.] _dl_start
+            |
+            ---_dl_start
+               _dl_sysdep_start
+               dl_main
+
+     0.77%     0.00%  parallel_sort_p  ld-linux-x86-64.so.2                [.] _dl_sysdep_start
+            |
+            ---_dl_sysdep_start
+               dl_main
+
+     0.77%     0.00%  parallel_sort_p  ld-linux-x86-64.so.2                [.] dl_main
+            |
+            ---dl_main
+
+     0.73%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] do_fault
+            |
+            ---do_fault
+
+     0.71%     0.71%  parallel_sort_p  [kernel.kallsyms]                   [k] __irqentry_text_end
+     0.67%     0.67%  parallel_sort_p  [kernel.kallsyms]                   [k] update_curr
+     0.58%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] vma_alloc_folio_noprof
+            |
+            ---vma_alloc_folio_noprof
+               folio_alloc_mpol_noprof
+               alloc_pages_mpol_noprof
+               __alloc_pages_noprof
+               get_page_from_freelist
+
+     0.58%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] folio_alloc_mpol_noprof
+            |
+            ---folio_alloc_mpol_noprof
+               alloc_pages_mpol_noprof
+               __alloc_pages_noprof
+               get_page_from_freelist
+
+     0.58%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] alloc_pages_mpol_noprof
+            |
+            ---alloc_pages_mpol_noprof
+               __alloc_pages_noprof
+               get_page_from_freelist
+
+     0.58%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __alloc_pages_noprof
+            |
+            ---__alloc_pages_noprof
+               get_page_from_freelist
+
+     0.58%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] get_page_from_freelist
+            |
+            ---get_page_from_freelist
+
+     0.57%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c8e5e000c72b0
+            |
+            ---0xc8e5e000c72b0
+               void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)
+
+     0.54%     0.22%  parallel_sort_p  [kernel.kallsyms]                   [k] lock_vma_under_rcu
+     0.49%     0.26%  parallel_sort_p  [kernel.kallsyms]                   [k] folio_add_lru
+     0.49%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] folio_add_lru_vma
+     0.49%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000900fe00091354
+     0.48%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0003619a00046016
+     0.48%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000168e100021cd3
+     0.48%     0.00%  parallel_sort_p  [unknown]                           [k] 0x00052268000517d1
+     0.48%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __mem_cgroup_charge
+     0.47%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00081bf800080485
+     0.47%     0.00%  parallel_sort_p  libc.so.6                           [.] __munmap
+     0.47%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __x64_sys_munmap
+     0.47%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __vm_munmap
+     0.47%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] do_vmi_munmap
+     0.47%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] do_vmi_align_munmap
+     0.47%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] unmap_region
+     0.47%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000beedc000b9a3e
+     0.47%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0006eeed0006a714
+     0.47%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00073214000731fb
+     0.46%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00076dbf00077779
+     0.46%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000a79b2000a356e
+     0.46%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00083685000826dd
+     0.45%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000333c8000340f5
+     0.45%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0001ce510001ca18
+     0.43%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000fdb00000fc42
+     0.43%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000d6861000d15ba
+     0.42%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000df44c000df4c6
+     0.39%     0.39%  parallel_sort_p  ld-linux-x86-64.so.2                [.] do_lookup_x
+     0.39%     0.00%  parallel_sort_p  ld-linux-x86-64.so.2                [.] _dl_relocate_object
+     0.39%     0.00%  parallel_sort_p  ld-linux-x86-64.so.2                [.] _dl_lookup_symbol_x
+     0.38%     0.38%  parallel_sort_p  [kernel.kallsyms]                   [k] pte_mkwrite
+     0.38%     0.00%  parallel_sort_p  ld-linux-x86-64.so.2                [.] _dl_map_object_deps
+     0.38%     0.00%  parallel_sort_p  ld-linux-x86-64.so.2                [.] _dl_catch_exception
+     0.38%     0.00%  parallel_sort_p  ld-linux-x86-64.so.2                [.] openaux
+     0.38%     0.00%  parallel_sort_p  ld-linux-x86-64.so.2                [.] _dl_map_object
+     0.38%     0.00%  parallel_sort_p  ld-linux-x86-64.so.2                [.] memset
+     0.38%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] finish_fault
+     0.37%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000dcb85000dcb14
+     0.36%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000d146b000d15ba
+     0.35%     0.35%  parallel_sort_p  [kernel.kallsyms]                   [k] next_uptodate_folio
+     0.35%     0.00%  parallel_sort_p  ld-linux-x86-64.so.2                [.] _dl_init
+     0.35%     0.00%  parallel_sort_p  libgcc_s.so.1                       [.] 0x000070ffd7b0e000
+     0.35%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] do_read_fault
+     0.35%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] filemap_map_pages
+     0.34%     0.34%  parallel_sort_p  [kernel.kallsyms]                   [k] __pte_offset_map_lock
+     0.33%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000da311000da327
+     0.32%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] mas_walk
+     0.31%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000d84f8000d84fe
+     0.30%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000d64b9000d6492
+     0.30%     0.30%  parallel_sort_p  [kernel.kallsyms]                   [k] clear_page_erms
+     0.29%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000d4c1a000d4b2b
+     0.28%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000d2a24000d29d5
+     0.28%     0.28%  parallel_sort_p  [kernel.kallsyms]                   [k] rmqueue
+     0.28%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000d1301000d130a
+     0.27%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c3d8f000c29dd
+     0.26%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c7297000c4c89
+     0.26%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000cebd2000ceea5
+     0.26%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000ce1b3000ce1bd
+     0.25%     0.25%  parallel_sort_p  [kernel.kallsyms]                   [k] error_entry
+     0.25%     0.00%  parallel_sort_p  [unknown]                           [k] 0x000cce58000cce5c
+     0.25%     0.25%  parallel_sort_p  [kernel.kallsyms]                   [k] page_counter_try_charge
+     0.25%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] try_charge_memcg
+     0.25%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000cc39d000cc3a2
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00059c1c00059b8b
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c93c5000c98b3
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0008d7460008d746
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0008f44b0008f425
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000908a400090875
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0009442f00094429
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0008c3370008c264
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0008b5150008b33a
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00095b2700095cc4
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0005ae7f0005b03a
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000955970009460b
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00098aa400098a41
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000995610009930d
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00099ee400098eab
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0009b3110009b316
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00058c0000058bfa
+     0.24%     0.24%  parallel_sort_p  [kernel.kallsyms]                   [k] rcu_pending
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] rcu_sched_clock_irq
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000968bf0008ef44
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000868d400086831
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0007d2270007a944
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0009cafe0009caf2
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c9f72000c9f48
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0009e5ff0009e5e2
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000579be000579bd
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000a0056000a014c
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000a1247000a106c
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000a24de000a24e0
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00022b0700022b40
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00055db5000517d1
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00024d7700024d6c
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000a3da3000a3da6
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0002298100022980
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00025e0300025e07
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000a4b4f000a4b38
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0002ebd80002ebd6
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0005c4f60005c483
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00027b7d00027b7b
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000a6e5f000a6e5a
+     0.24%     0.24%  parallel_sort_p  [kernel.kallsyms]                   [k] sched_clock_cpu
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] update_load_avg
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000289d200028db9
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000a7ee2000a7b01
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c4816000c456b
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0005dec60005ded2
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000552e800055291
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00025873000258f7
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0005f11e0005ef16
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0002bada0002badf
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0008a9360008a8e8
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000a8f86000a8f88
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0003023b0003023b
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0002c4450002c57d
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00089a0000087fe1
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0002cddb0002ce79
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00060d2600060d1a
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00054adc00054b45
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0006eda20006edaa
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c89be000c89c7
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000a9e75000aa012
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000315c800031688
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00087ea500087fe1
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00053a04000539e9
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0005df280005ea1d
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000ab9c3000ab9bf
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00032e4300032eaf
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000400ff0004010f
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0006f8590006f78c
+     0.24%     0.24%  parallel_sort_p  [kernel.kallsyms]                   [k] perf_adjust_freq_unthr_context
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] perf_event_task_tick
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000654700006531
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00088e5700088e6e
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000ad313000ad30c
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0005144700051435
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00070e8700070e20
+     0.24%     0.24%  parallel_sort_p  [kernel.kallsyms]                   [k] kmem_cache_free
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __x64_sys_exit_group
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] do_group_exit
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] do_exit
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] exit_mm
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] mmput
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __mmput
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] exit_mmap
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] remove_vma
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __vm_area_free
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00062eaa00062f02
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c7682000c7681
+     0.24%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00000f3400000edf
+     0.24%     0.24%  parallel_sort_p  [kernel.kallsyms]                   [k] __mod_memcg_lruvec_state
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] tlb_finish_mmu
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __tlb_batch_free_encoded_pages
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] free_pages_and_swap_cache
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] folios_put_refs
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __page_cache_release.part.0
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] lru_gen_del_folio.constprop.0
+     0.24%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __mod_lruvec_state
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000340e0000340d2
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000414b2000414cd
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000724fa000724eb
+     0.23%     0.23%  parallel_sort_p  [kernel.kallsyms]                   [k] zap_present_ptes
+     0.23%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] unmap_vmas
+     0.23%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] unmap_single_vma
+     0.23%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] unmap_page_range
+     0.23%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] zap_pmd_range.isra.0
+     0.23%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] zap_pte_range
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00002a8b00002a8f
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000e18f2000e192b
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000218ad00021536
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000aebc2000aebb8
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000e3415000e3421
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000beedc000d6c5f
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000081760000817e
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c57a9000c4c76
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000a9eaa000aa012
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000b1fb2000b1fb7
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000038e8000038e7
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0003fe940003fbaa
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000ae98a000af1d7
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00000000a45a83b0
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000000001b122ff7
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000ea8e5000ea8fc
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000e364a000e3798
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000b32f9000b3324
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000e4f27000e4df1
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000653de00065404
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000745a00007cf6
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000050b100005060
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000b459d000b4622
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000e522b000e59d8
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00000000781dd652
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000ec3bd000ec3c8
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000e829d000e82aa
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000b61be000b6222
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000e8c41000e8c40
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000ae003000af4b0
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000ecc2f000ecc97
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00075b4800075b3c
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00036b9b00036b9c
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00043b3f00043b3e
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00000000e9cf8220
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000b7a42000b7aa6
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000bc030000bbec9
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00086e1300086cb1
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c14ef000c1507
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c0cbd000c044e
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000b7900000b7e8d
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000ba644000ba6b1
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000eda6c000eda18
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000bdb33000bdb29
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00000000aa2b98ae
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000be8c2000be963
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000a3e60000a399
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000bb31c000bb31f
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c041e000c0424
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000ba21e000b9a3e
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0006708300067093
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c4dcf000c4dd6
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000c371c000c371d
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000efc03000efc37
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0008614c0008614f
+     0.23%     0.23%  parallel_sort_p  [kernel.kallsyms]                   [k] __mod_zone_page_state
+     0.23%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] folio_batch_move_lru
+     0.23%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] lru_add_fn
+     0.23%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] lru_gen_add_folio
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00086ffb0008700e
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000000006b37469e
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000e47b4000e8217
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00045258000451dc
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0003853200038535
+     0.23%     0.23%  parallel_sort_p  libstdc++.so.6.0.33                 [.] fwrite@plt
+     0.23%     0.00%  parallel_sort_p  libstdc++.so.6.0.33                 [.] std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+     0.23%     0.00%  parallel_sort_p  libstdc++.so.6.0.33                 [.] .plt
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000b79f0000b922
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000f176f000f1768
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000f2bb1000f2cb7
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000000096e6b9f7
+     0.23%     0.23%  parallel_sort_p  [kernel.kallsyms]                   [k] mem_cgroup_commit_charge
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0008575700085781
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000ef333000ef135
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000f3c45000f3c2c
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00067f6e00067f60
+     0.23%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] irqentry_exit
+     0.23%     0.22%  parallel_sort_p  [kernel.kallsyms]                   [k] irqentry_exit_to_user_mode
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00000000061badd9
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000d10b0000d102
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000ebf1a000e8217
+     0.23%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00045d9700045dbf
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000396cd000398e9
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00000000c219ae17
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0007a5b70007a5b4
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000204b3000204aa
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000e62b0000e4f7
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000000062af3a5f
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0006996700069975
+     0.22%     0.22%  parallel_sort_p  [kernel.kallsyms]                   [k] __count_memcg_events
+     0.22%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] count_memcg_events.constprop.0
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000000003c880541
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00000000e69a7b26
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000385bd0003882b
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0007b04b0007afc6
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00069a7e00068dc3
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000f7960000f798
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0006d3d80006d453
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00081a7d000818fe
+     0.22%     0.22%  parallel_sort_p  [kernel.kallsyms]                   [k] up_read
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000000002118286f
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0008337f0008337f
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0003ae140003ae97
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000833df0008337f
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000000099686fc1
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000000007728e166
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000000022c1872f
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0007d2020007d265
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000000002e46e328
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000000005e0a52c3
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0006ac2a0006ac2a
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000000001860af74
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00031ffe0002f3ed
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00000000f004760a
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0001000d00010058
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000000053c88abd
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0003e93d0003e949
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000469c7000469c6
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00000000a69ec457
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0007a97e0007a944
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000000001069cbb3
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00000000948e403c
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0007f2490007f202
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0003726c000368a5
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0006c0920006c092
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00000000585f2c03
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000000005689063d
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00080a7c00080a7c
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000480b6000480f0
+     0.22%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0003d3060003d308
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0001aba20001abe2
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00048b0900048d10
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00012e9900012a29
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0001a2330001a223
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000168e1000162ca
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0001f6410001f64c
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000150f2000150f6
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000125110001258d
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0004a6a70004a6a3
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0004bdd50004bdf0
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000472ec00048318
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [k] 0x0001c57e0001c56b
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000db550000d597
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00013da3000143c1
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0001cb1d0001cbcb
+     0.21%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0001944700019421
+     0.20%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000040a700004111
+     0.20%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0004d6f20004d6ff
+     0.20%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0001d8550001db4c
+     0.20%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00016d3200016d34
+     0.20%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00017f8f00017f9c
+     0.20%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0000745a0000938e
+     0.20%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00004ecf00005620
+     0.20%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0004ec170004ec0b
+     0.20%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0004fdb50004fdb6
+     0.20%     0.00%  parallel_sort_p  [unknown]                           [.] 0x00050b2000050b75
+     0.19%     0.00%  parallel_sort_p  [unknown]                           [.] 0x0004c9360004d4d2
+     0.19%     0.00%  parallel_sort_p  [unknown]                           [.] 0x000472ec0004b4c6
+     0.17%     0.17%  parallel_sort_p  [kernel.kallsyms]                   [k] perf_event_mmap_output
+     0.17%     0.00%  parallel_sort_p  [unknown]                           [k] 0x00007312c54eef3b
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __x64_sys_execve
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] do_execveat_common.isra.0
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] bprm_execve
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] bprm_execve.part.0
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] exec_binprm
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] search_binary_handler
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] load_elf_binary
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] elf_load
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] vm_mmap
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] vm_mmap_pgoff
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] do_mmap
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] mmap_region
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] perf_event_mmap
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] perf_event_mmap_event
+     0.17%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] perf_iterate_sb.constprop.0
+     0.02%     0.00%  perf-exec        [unknown]                           [k] 0x00007312c54eef3b
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]                   [k] entry_SYSCALL_64_after_hwframe
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]                   [k] do_syscall_64
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]                   [k] x64_sys_call
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]                   [k] __x64_sys_execve
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]                   [k] do_execveat_common.isra.0
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]                   [k] bprm_execve
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]                   [k] bprm_execve.part.0
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]                   [k] exec_binprm
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]                   [k] search_binary_handler
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]                   [k] load_elf_binary
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]                   [k] begin_new_exec
+     0.02%     0.02%  perf-exec        [kernel.kallsyms]                   [k] perf_event_comm_event.constprop.0
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]                   [k] __set_task_comm
+     0.00%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] native_write_msr
+     0.00%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] schedule
+     0.00%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __schedule
+     0.00%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] finish_task_switch.isra.0
+     0.00%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] __perf_event_task_sched_in
+     0.00%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] perf_ctx_enable
+     0.00%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] x86_pmu_enable
+     0.00%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] intel_pmu_enable_all
+     0.00%     0.00%  parallel_sort_p  [kernel.kallsyms]                   [k] end_repeat_nmi
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]                   [k] native_write_msr
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]                   [k] perf_event_exec
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]                   [k] perf_event_enable_on_exec
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]                   [k] ctx_resched
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]                   [k] perf_ctx_enable
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]                   [k] x86_pmu_enable
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]                   [k] intel_pmu_enable_all
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]                   [k] ct_nmi_exit
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]                   [k] native_apic_msr_write
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

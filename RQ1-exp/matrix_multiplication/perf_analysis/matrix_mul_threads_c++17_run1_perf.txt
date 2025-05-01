@@ -1,0 +1,756 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'cycles:P'
+# Event count (approx.): 1130315306
+#
+# Children      Self  Command          Shared Object                  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  ........  ...............  .............................  .........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    96.22%     0.00%  matrix_mul_thre  [unknown]                      [.] 0x400886612a144fa9
+            |
+            ---0x400886612a144fa9
+               0x5d0445d4f0f0
+               0x5d0445d4e140
+               |          
+                --95.97%--multiply_worker(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&, unsigned long, unsigned long)
+                          |          
+                           --1.98%--asm_sysvec_apic_timer_interrupt
+                                     |          
+                                      --1.81%--sysvec_apic_timer_interrupt
+                                                |          
+                                                 --1.52%--__sysvec_apic_timer_interrupt
+                                                           hrtimer_interrupt
+                                                           |          
+                                                            --1.10%--__hrtimer_run_queues
+                                                                      |          
+                                                                       --0.84%--tick_nohz_handler
+                                                                                 |          
+                                                                                  --0.78%--update_process_times
+
+    96.22%     0.00%  matrix_mul_thre  [unknown]                      [.] 0x00005d0445d4f0f0
+            |
+            ---0x5d0445d4f0f0
+               0x5d0445d4e140
+               |          
+                --95.97%--multiply_worker(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&, unsigned long, unsigned long)
+                          |          
+                           --1.98%--asm_sysvec_apic_timer_interrupt
+                                     |          
+                                      --1.81%--sysvec_apic_timer_interrupt
+                                                |          
+                                                 --1.52%--__sysvec_apic_timer_interrupt
+                                                           hrtimer_interrupt
+                                                           |          
+                                                            --1.10%--__hrtimer_run_queues
+                                                                      |          
+                                                                       --0.84%--tick_nohz_handler
+                                                                                 |          
+                                                                                  --0.78%--update_process_times
+
+    96.22%     0.00%  matrix_mul_thre  [unknown]                      [.] 0x00005d0445d4e140
+            |
+            ---0x5d0445d4e140
+               |          
+                --95.97%--multiply_worker(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&, unsigned long, unsigned long)
+                          |          
+                           --1.98%--asm_sysvec_apic_timer_interrupt
+                                     |          
+                                      --1.81%--sysvec_apic_timer_interrupt
+                                                |          
+                                                 --1.52%--__sysvec_apic_timer_interrupt
+                                                           hrtimer_interrupt
+                                                           |          
+                                                            --1.10%--__hrtimer_run_queues
+                                                                      |          
+                                                                       --0.84%--tick_nohz_handler
+                                                                                 |          
+                                                                                  --0.78%--update_process_times
+
+    95.97%    93.98%  matrix_mul_thre  matrix_mul_threads_c++17_perf  [.] multiply_worker(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&, unsigned long, unsigned long)
+            |          
+            |--93.98%--0x400886612a144fa9
+            |          0x5d0445d4f0f0
+            |          0x5d0445d4e140
+            |          multiply_worker(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&, unsigned long, unsigned long)
+            |          
+             --1.99%--multiply_worker(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&, unsigned long, unsigned long)
+                       |          
+                        --1.81%--asm_sysvec_apic_timer_interrupt
+                                  sysvec_apic_timer_interrupt
+                                  |          
+                                   --1.52%--__sysvec_apic_timer_interrupt
+                                             hrtimer_interrupt
+                                             |          
+                                              --1.10%--__hrtimer_run_queues
+                                                        |          
+                                                         --0.84%--tick_nohz_handler
+                                                                   |          
+                                                                    --0.78%--update_process_times
+
+     2.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] asm_sysvec_apic_timer_interrupt
+            |
+            ---asm_sysvec_apic_timer_interrupt
+               |          
+                --1.88%--sysvec_apic_timer_interrupt
+                          |          
+                           --1.57%--__sysvec_apic_timer_interrupt
+                                     hrtimer_interrupt
+                                     |          
+                                      --1.15%--__hrtimer_run_queues
+                                                |          
+                                                 --0.89%--tick_nohz_handler
+                                                           |          
+                                                            --0.83%--update_process_times
+                                                                      |          
+                                                                       --0.53%--sched_tick
+
+     1.88%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] sysvec_apic_timer_interrupt
+            |          
+             --1.88%--sysvec_apic_timer_interrupt
+                       |          
+                        --1.57%--__sysvec_apic_timer_interrupt
+                                  hrtimer_interrupt
+                                  |          
+                                   --1.15%--__hrtimer_run_queues
+                                             |          
+                                              --0.89%--tick_nohz_handler
+                                                        |          
+                                                         --0.83%--update_process_times
+                                                                   |          
+                                                                    --0.53%--sched_tick
+
+     1.57%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __sysvec_apic_timer_interrupt
+            |
+            ---__sysvec_apic_timer_interrupt
+               hrtimer_interrupt
+               |          
+                --1.15%--__hrtimer_run_queues
+                          |          
+                           --0.89%--tick_nohz_handler
+                                     |          
+                                      --0.83%--update_process_times
+                                                |          
+                                                 --0.53%--sched_tick
+
+     1.57%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] hrtimer_interrupt
+            |          
+             --1.51%--hrtimer_interrupt
+                       |          
+                        --1.15%--__hrtimer_run_queues
+                                  |          
+                                   --0.89%--tick_nohz_handler
+                                             |          
+                                              --0.83%--update_process_times
+                                                        |          
+                                                         --0.53%--sched_tick
+
+     1.27%     0.00%  matrix_mul_thre  [unknown]                      [.] 0000000000000000
+            |
+            ---0
+               std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&)
+               operator new(unsigned long)
+               malloc
+               _int_malloc
+               |          
+                --0.98%--asm_exc_page_fault
+                          |          
+                           --0.81%--exc_page_fault
+                                     do_user_addr_fault
+                                     |          
+                                      --0.69%--handle_mm_fault
+                                                __handle_mm_fault
+                                                handle_pte_fault
+                                                |          
+                                                 --0.64%--do_anonymous_page
+
+     1.27%     0.00%  matrix_mul_thre  matrix_mul_threads_c++17_perf  [.] std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&)
+            |
+            ---std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&)
+               operator new(unsigned long)
+               malloc
+               _int_malloc
+               |          
+                --0.98%--asm_exc_page_fault
+                          |          
+                           --0.81%--exc_page_fault
+                                     do_user_addr_fault
+                                     |          
+                                      --0.69%--handle_mm_fault
+                                                __handle_mm_fault
+                                                handle_pte_fault
+                                                |          
+                                                 --0.64%--do_anonymous_page
+
+     1.27%     0.00%  matrix_mul_thre  libstdc++.so.6.0.33            [.] operator new(unsigned long)
+            |
+            ---operator new(unsigned long)
+               malloc
+               _int_malloc
+               |          
+                --0.98%--asm_exc_page_fault
+                          |          
+                           --0.81%--exc_page_fault
+                                     do_user_addr_fault
+                                     |          
+                                      --0.69%--handle_mm_fault
+                                                __handle_mm_fault
+                                                handle_pte_fault
+                                                |          
+                                                 --0.64%--do_anonymous_page
+
+     1.27%     0.00%  matrix_mul_thre  libc.so.6                      [.] malloc
+            |
+            ---malloc
+               _int_malloc
+               |          
+                --0.98%--asm_exc_page_fault
+                          |          
+                           --0.81%--exc_page_fault
+                                     do_user_addr_fault
+                                     |          
+                                      --0.69%--handle_mm_fault
+                                                __handle_mm_fault
+                                                handle_pte_fault
+                                                |          
+                                                 --0.64%--do_anonymous_page
+
+     1.27%     0.18%  matrix_mul_thre  libc.so.6                      [.] _int_malloc
+            |          
+             --1.09%--_int_malloc
+                       |          
+                        --0.81%--asm_exc_page_fault
+                                  exc_page_fault
+                                  do_user_addr_fault
+                                  |          
+                                   --0.69%--handle_mm_fault
+                                             __handle_mm_fault
+                                             handle_pte_fault
+                                             |          
+                                              --0.64%--do_anonymous_page
+
+     1.22%     0.00%  matrix_mul_thre  [unknown]                      [.] 0x0000000000000fb1
+            |
+            ---0xfb1
+               |          
+                --1.05%--generate_matrix(unsigned long, unsigned long)
+
+     1.22%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] asm_exc_page_fault
+            |
+            ---asm_exc_page_fault
+               |          
+                --1.04%--exc_page_fault
+                          do_user_addr_fault
+                          |          
+                           --0.86%--handle_mm_fault
+                                     __handle_mm_fault
+                                     handle_pte_fault
+                                     |          
+                                      --0.71%--do_anonymous_page
+
+     1.15%     0.07%  matrix_mul_thre  [kernel.kallsyms]              [k] __hrtimer_run_queues
+            |          
+             --1.08%--__hrtimer_run_queues
+                       |          
+                        --0.89%--tick_nohz_handler
+                                  |          
+                                   --0.83%--update_process_times
+                                             |          
+                                              --0.53%--sched_tick
+
+     1.05%     1.05%  matrix_mul_thre  matrix_mul_threads_c++17_perf  [.] generate_matrix(unsigned long, unsigned long)
+            |
+            ---0xfb1
+               generate_matrix(unsigned long, unsigned long)
+
+     1.04%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] exc_page_fault
+            |
+            ---exc_page_fault
+               do_user_addr_fault
+               |          
+                --0.86%--handle_mm_fault
+                          __handle_mm_fault
+                          handle_pte_fault
+                          |          
+                           --0.71%--do_anonymous_page
+
+     1.04%     0.11%  matrix_mul_thre  [kernel.kallsyms]              [k] do_user_addr_fault
+            |          
+             --0.93%--do_user_addr_fault
+                       |          
+                        --0.86%--handle_mm_fault
+                                  __handle_mm_fault
+                                  handle_pte_fault
+                                  |          
+                                   --0.71%--do_anonymous_page
+
+     1.01%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] entry_SYSCALL_64_after_hwframe
+            |
+            ---entry_SYSCALL_64_after_hwframe
+               do_syscall_64
+               |          
+                --0.88%--x64_sys_call
+
+     1.01%     0.08%  matrix_mul_thre  [kernel.kallsyms]              [k] do_syscall_64
+            |          
+             --0.93%--do_syscall_64
+                       |          
+                        --0.88%--x64_sys_call
+
+     0.89%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] tick_nohz_handler
+            |
+            ---tick_nohz_handler
+               |          
+                --0.83%--update_process_times
+                          |          
+                           --0.53%--sched_tick
+
+     0.88%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] x64_sys_call
+            |
+            ---x64_sys_call
+
+     0.86%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] handle_mm_fault
+            |
+            ---handle_mm_fault
+               __handle_mm_fault
+               handle_pte_fault
+               |          
+                --0.71%--do_anonymous_page
+
+     0.86%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __handle_mm_fault
+            |
+            ---__handle_mm_fault
+               handle_pte_fault
+               |          
+                --0.71%--do_anonymous_page
+
+     0.86%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] handle_pte_fault
+            |
+            ---handle_pte_fault
+               |          
+                --0.71%--do_anonymous_page
+
+     0.83%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] update_process_times
+            |          
+             --0.76%--update_process_times
+                       |          
+                        --0.53%--sched_tick
+
+     0.77%     0.05%  matrix_mul_thre  [kernel.kallsyms]              [k] do_anonymous_page
+            |          
+             --0.71%--do_anonymous_page
+
+     0.60%     0.00%  matrix_mul_thre  libc.so.6                      [.] clone3
+            |
+            ---clone3
+
+     0.53%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] sched_tick
+            |
+            ---sched_tick
+
+     0.48%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] alloc_anon_folio
+     0.35%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] task_tick_fair
+     0.33%     0.00%  matrix_mul_thre  libstdc++.so.6.0.33            [.] std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)())
+     0.29%     0.00%  matrix_mul_thre  libc.so.6                      [.] pthread_create@GLIBC_2.2.5
+     0.29%     0.00%  matrix_mul_thre  ld-linux-x86-64.so.2           [.] _dl_start_user
+     0.29%     0.00%  matrix_mul_thre  ld-linux-x86-64.so.2           [.] _dl_start
+     0.27%     0.00%  matrix_mul_thre  libc.so.6                      [.] start_thread
+     0.26%     0.00%  matrix_mul_thre  matrix_mul_threads_c++17_perf  [.] main
+     0.25%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] vma_alloc_folio_noprof
+     0.25%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] folio_alloc_mpol_noprof
+     0.25%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] alloc_pages_mpol_noprof
+     0.25%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __alloc_pages_noprof
+     0.25%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] get_page_from_freelist
+     0.25%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] irq_exit_rcu
+     0.25%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __irq_exit_rcu
+     0.25%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] handle_softirqs
+     0.24%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __x64_sys_exit_group
+     0.24%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] do_group_exit
+     0.24%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] do_exit
+     0.24%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] exit_mm
+     0.24%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] mmput
+     0.24%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __mmput
+     0.24%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] exit_mmap
+     0.24%     0.00%  matrix_mul_thre  ld-linux-x86-64.so.2           [.] _dl_sysdep_start
+     0.24%     0.00%  matrix_mul_thre  ld-linux-x86-64.so.2           [.] dl_main
+     0.23%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] account_process_tick
+     0.22%     0.00%  matrix_mul_thre  matrix_mul_threads_c++17_perf  [.] void std::vector<std::thread, std::allocator<std::thread> >::_M_realloc_insert<void (&)(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&, unsigned long, unsigned long), std::reference_wrapper<std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const>, std::reference_wrapper<std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const>, std::reference_wrapper<std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > >, unsigned long&, unsigned long&>(__gnu_cxx::__normal_iterator<std::thread*, std::vector<std::thread, std::allocator<std::thread> > >, void (&)(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&, unsigned long, unsigned long), std::reference_wrapper<std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const>&&, std::reference_wrapper<std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const>&&, std::reference_wrapper<std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > >&&, unsigned long&, unsigned long&)
+     0.22%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] schedule
+     0.22%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __schedule
+     0.21%     0.00%  matrix_mul_thre  matrix_mul_threads_c++17_perf  [.] thread_multiply(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, unsigned long)
+     0.21%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __mem_cgroup_charge
+     0.20%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] unmap_single_vma
+     0.20%     0.05%  matrix_mul_thre  [kernel.kallsyms]              [k] zap_pte_range
+     0.20%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] unmap_page_range
+     0.20%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] zap_pmd_range.isra.0
+     0.20%     0.20%  matrix_mul_thre  [kernel.kallsyms]              [k] clear_page_erms
+     0.19%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] wake_up_process
+     0.19%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] try_to_wake_up
+     0.19%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] ttwu_do_activate
+     0.19%     0.13%  matrix_mul_thre  [kernel.kallsyms]              [k] update_curr
+     0.18%     0.00%  matrix_mul_thre  libc.so.6                      [.] create_thread
+     0.18%     0.18%  matrix_mul_thre  [kernel.kallsyms]              [k] perf_adjust_freq_unthr_context
+     0.18%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] perf_event_task_tick
+     0.18%     0.18%  matrix_mul_thre  [kernel.kallsyms]              [k] __irqentry_text_end
+     0.18%     0.12%  matrix_mul_thre  [kernel.kallsyms]              [k] tick_program_event
+     0.17%     0.17%  matrix_mul_thre  matrix_mul_threads_c++17_perf  [.] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+     0.17%     0.12%  matrix_mul_thre  [kernel.kallsyms]              [k] account_user_time
+     0.17%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] folio_add_lru_vma
+     0.17%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] folio_add_lru
+     0.17%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] folio_batch_move_lru
+     0.17%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] irqentry_exit
+     0.17%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] irqentry_exit_to_user_mode
+     0.16%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __x64_sys_clone3
+     0.16%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __do_sys_clone3
+     0.16%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] kernel_clone
+     0.16%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] copy_process
+     0.16%     0.16%  matrix_mul_thre  [kernel.kallsyms]              [k] update_load_avg
+     0.15%     0.10%  matrix_mul_thre  [kernel.kallsyms]              [k] zap_present_ptes
+     0.15%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] unmap_vmas
+     0.13%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] hrtimer_wakeup
+     0.13%     0.12%  matrix_mul_thre  [kernel.kallsyms]              [k] native_write_msr
+     0.13%     0.13%  matrix_mul_thre  [kernel.kallsyms]              [k] native_irq_return_iret
+     0.12%     0.12%  matrix_mul_thre  [kernel.kallsyms]              [k] ktime_get_update_offsets_now
+     0.12%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] rcu_report_qs_rdp
+     0.12%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] rcu_core_si
+     0.12%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] rcu_core
+     0.12%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] enqueue_task
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __x64_sys_mmap
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] ksys_mmap_pgoff
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] vm_mmap_pgoff
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] do_mmap
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] mmap_region
+     0.11%     0.05%  matrix_mul_thre  [kernel.kallsyms]              [k] __queue_work.part.0
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] run_timer_softirq
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __run_timers
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] call_timer_fn
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] rps_timer
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] queue_work_on
+     0.11%     0.11%  matrix_mul_thre  [kernel.kallsyms]              [k] lru_gen_add_folio
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] lru_add_fn
+     0.11%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] __x64_sys_mprotect
+     0.11%     0.00%  matrix_mul_thre  libc.so.6                      [.] __default_morecore@GLIBC_2.2.5
+     0.11%     0.00%  matrix_mul_thre  libc.so.6                      [.] __brk
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __x64_sys_brk
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __do_sys_brk
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] asm_sysvec_reschedule_ipi
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] sysvec_reschedule_ipi
+     0.11%     0.00%  matrix_mul_thre  libc.so.6                      [.] cfree@GLIBC_2.2.5
+     0.11%     0.11%  matrix_mul_thre  [kernel.kallsyms]              [k] mas_next_slot
+     0.11%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] mas_find
+     0.10%     0.00%  matrix_mul_thre  libstdc++.so.6.0.33            [.] std::thread::join()
+     0.10%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] do_vmi_munmap
+     0.10%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] do_vmi_align_munmap
+     0.10%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] tlb_finish_mmu
+     0.10%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __tlb_batch_free_encoded_pages
+     0.10%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] free_pages_and_swap_cache
+     0.10%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] folios_put_refs
+     0.10%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] finish_task_switch.isra.0
+     0.10%     0.00%  matrix_mul_thre  libc.so.6                      [.] __pthread_clockjoin_ex
+     0.09%     0.09%  matrix_mul_thre  [kernel.kallsyms]              [k] next_uptodate_folio
+     0.09%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] do_fault
+     0.09%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] do_read_fault
+     0.09%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] filemap_map_pages
+     0.09%     0.03%  matrix_mul_thre  [kernel.kallsyms]              [k] __count_memcg_events
+     0.09%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] mem_cgroup_commit_charge
+     0.08%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] x86_pmu_enable
+     0.08%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __perf_event_task_sched_in
+     0.08%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] perf_ctx_enable
+     0.07%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] intel_pmu_enable_all
+     0.07%     0.07%  matrix_mul_thre  [kernel.kallsyms]              [k] check_preempt_wakeup_fair
+     0.07%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] wakeup_preempt
+     0.07%     0.00%  matrix_mul_thre  libc.so.6                      [.] __res_thread_freeres
+     0.07%     0.07%  matrix_mul_thre  libstdc++.so.6.0.33            [.] 0x00000000000ecdb4
+     0.07%     0.00%  matrix_mul_thre  libstdc++.so.6.0.33            [.] 0x00007b76ce2ecdb7
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] __raw_spin_lock_irqsave
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] _raw_spin_lock_irqsave
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] update_cfs_group
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] rcu_pending
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] rcu_sched_clock_irq
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] folio_add_new_anon_rmap
+     0.06%     0.00%  matrix_mul_thre  libstdc++.so.6.0.33            [.] 0x00007b76ce2ecdbd
+     0.06%     0.00%  matrix_mul_thre  libc.so.6                      [.] tcache_init.part.0
+     0.06%     0.00%  matrix_mul_thre  libc.so.6                      [.] arena_get2.part.0
+     0.06%     0.00%  matrix_mul_thre  libc.so.6                      [.] __munmap
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __x64_sys_munmap
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __vm_munmap
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] enqueue_task_fair
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] enqueue_entity
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x0000000000000c71
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00005d0445d4a5e0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003b30
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003b40
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003b50
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003b60
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003b70
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003b80
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003b90
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003ba0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003bb0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003bc0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003bd0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003be0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003bf0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003c00
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003c10
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003c20
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003c30
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003c40
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003c50
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003c60
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003c70
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003c80
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003c90
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003ca0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003cb0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003cc0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003cd0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003ce0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003cf0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003d00
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003d10
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003d20
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003d30
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003d40
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003d50
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003d60
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003d70
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003d80
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003d90
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003da0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003db0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003dc0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003dd0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003de0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003df0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003e00
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003e10
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003e20
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003e30
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003e40
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003e50
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003e60
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003e70
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003e80
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003e90
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003ea0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003eb0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003ec0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003ed0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003ee0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003ef0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003f00
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003f10
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003f20
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003f30
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003f40
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003f50
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003f60
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003f70
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003f80
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003f90
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003fa0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003fb0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003fc0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003fd0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003fe0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce003ff0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce004000
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce004010
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce004020
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce004030
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce004040
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce004050
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce004060
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce004070
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce004080
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce004090
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce0040a0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce0040b0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce0040c0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce0040d0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce0040e0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce0040f0
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce004100
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce004110
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76ce004120
+     0.06%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00005d0445d4a2a0
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] clockevents_program_event
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] try_charge_memcg
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] rcu_accelerate_cbs
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] unlink_file_vma_batch_add
+     0.06%     0.00%  matrix_mul_thre  ld-linux-x86-64.so.2           [.] _dl_map_object_deps
+     0.06%     0.00%  matrix_mul_thre  ld-linux-x86-64.so.2           [.] _dl_catch_exception
+     0.06%     0.00%  matrix_mul_thre  ld-linux-x86-64.so.2           [.] openaux
+     0.06%     0.00%  matrix_mul_thre  ld-linux-x86-64.so.2           [.] _dl_map_object
+     0.06%     0.00%  matrix_mul_thre  ld-linux-x86-64.so.2           [.] _dl_map_object_from_fd
+     0.06%     0.00%  matrix_mul_thre  ld-linux-x86-64.so.2           [.] mmap64
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] unmap_region
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] free_pgtables
+     0.06%     0.00%  matrix_mul_thre  libc.so.6                      [.] __wmemchr_ifunc
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] __rcu_read_lock
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __pte_offset_map_lock
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __pte_offset_map
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] psi_task_change
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __queue_work
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] kick_pool
+     0.06%     0.06%  matrix_mul_thre  ld-linux-x86-64.so.2           [.] _dl_relocate_object
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] timerqueue_add
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] enqueue_hrtimer
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] mem_cgroup_from_task
+     0.06%     0.00%  matrix_mul_thre  ld-linux-x86-64.so.2           [.] mprotect
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] cgroup_rstat_updated
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] rmqueue_bulk
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] rmqueue
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __rmqueue_pcplist
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] get_mem_cgroup_from_mm
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] psi_group_change
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] psi_task_switch
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] perf_iterate_sb.constprop.0
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] do_brk_flags
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] perf_event_mmap
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] perf_event_mmap_event
+     0.06%     0.06%  matrix_mul_thre  [kernel.kallsyms]              [k] __perf_event_task_sched_out
+     0.06%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] prepare_task_switch
+     0.05%     0.05%  matrix_mul_thre  [kernel.kallsyms]              [k] folio_lruvec_lock_irqsave
+     0.05%     0.00%  matrix_mul_thre  libc.so.6                      [.] __mmap
+     0.05%     0.05%  matrix_mul_thre  [kernel.kallsyms]              [k] cpuacct_charge
+     0.05%     0.05%  matrix_mul_thre  [kernel.kallsyms]              [k] perf_event_alloc
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] perf_event_init_task
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] perf_event_init_context
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] inherit_task_group.isra.0
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] inherit_event.isra.0
+     0.05%     0.05%  matrix_mul_thre  [kernel.kallsyms]              [k] mas_wr_node_store
+     0.05%     0.00%  matrix_mul_thre  libc.so.6                      [.] __mprotect
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] do_mprotect_pkey
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] mprotect_fixup
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] vma_modify
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __split_vma
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] vma_complete
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] mas_store_prealloc
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] mas_wr_store_entry
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] mas_wr_modify
+     0.05%     0.05%  matrix_mul_thre  [kernel.kallsyms]              [k] radix_tree_tag_get
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] alloc_pid
+     0.05%     0.00%  matrix_mul_thre  libc.so.6                      [.] __libc_sigaction
+     0.05%     0.00%  matrix_mul_thre  libc.so.6                      [.] __madvise
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __x64_sys_madvise
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] do_madvise
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] madvise_walk_vmas
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] madvise_vma_behavior
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] zap_page_range_single
+     0.05%     0.05%  matrix_mul_thre  [kernel.kallsyms]              [k] memset_orig
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] dup_task_struct
+     0.05%     0.00%  matrix_mul_thre  libc.so.6                      [.] name_stack_maps
+     0.05%     0.00%  matrix_mul_thre  libc.so.6                      [.] __GI___snprintf
+     0.05%     0.00%  matrix_mul_thre  libc.so.6                      [.] __vsnprintf_internal
+     0.05%     0.05%  matrix_mul_thre  [kernel.kallsyms]              [k] __cgroup_account_cputime_field
+     0.05%     0.05%  matrix_mul_thre  [kernel.kallsyms]              [k] lru_gen_del_folio.constprop.0
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __page_cache_release.part.0
+     0.05%     0.05%  matrix_mul_thre  [kernel.kallsyms]              [k] free_unref_page_commit
+     0.05%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] free_unref_folios
+     0.05%     0.00%  matrix_mul_thre  libc.so.6                      [.] __GI___futex_abstimed_wait_cancelable64
+     0.05%     0.05%  matrix_mul_thre  libc.so.6                      [.] __nptl_free_stacks
+     0.05%     0.05%  matrix_mul_thre  libstdc++.so.6.0.33            [.] .plt
+     0.05%     0.05%  matrix_mul_thre  libc.so.6                      [.] _int_free_merge_chunk
+     0.05%     0.00%  matrix_mul_thre  [unknown]                      [.] 0x0000000000068e91
+     0.05%     0.00%  matrix_mul_thre  matrix_mul_threads_c++17_perf  [.] std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::~vector()
+     0.05%     0.00%  matrix_mul_thre  libstdc++.so.6.0.33            [.] std::ostream& std::ostream::_M_insert<double>(double)
+     0.05%     0.00%  matrix_mul_thre  libc.so.6                      [.] __GI___nptl_deallocate_stack
+     0.05%     0.00%  matrix_mul_thre  libc.so.6                      [.] _int_free
+     0.05%     0.00%  matrix_mul_thre  libstdc++.so.6.0.33            [.] std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_float<double>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, char, double) const
+     0.04%     0.02%  matrix_mul_thre  [kernel.kallsyms]              [k] sched_balance_update_blocked_averages
+     0.04%     0.04%  matrix_mul_thre  [kernel.kallsyms]              [k] load_elf_binary
+     0.04%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007a329a4eef3b
+     0.04%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __x64_sys_execve
+     0.04%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] do_execveat_common.isra.0
+     0.04%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] bprm_execve
+     0.04%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] bprm_execve.part.0
+     0.04%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] exec_binprm
+     0.04%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] search_binary_handler
+     0.04%     0.04%  matrix_mul_thre  [kernel.kallsyms]              [k] mas_nomem
+     0.04%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] mas_store_gfp
+     0.03%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __x64_sys_futex
+     0.03%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] do_futex
+     0.03%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] futex_wait
+     0.03%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __futex_wait
+     0.03%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] futex_wait_queue
+     0.03%     0.00%  matrix_mul_thre  libc.so.6                      [.] __strchrnul_avx2
+     0.03%     0.03%  matrix_mul_thre  [kernel.kallsyms]              [k] __update_load_avg_cfs_rq
+     0.03%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] pick_next_task
+     0.03%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] pick_next_task_fair
+     0.03%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] sched_balance_newidle
+     0.03%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __update_blocked_fair
+     0.02%     0.02%  matrix_mul_thre  libc.so.6                      [.] __printf_buffer
+     0.02%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] down_write_killable
+     0.02%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] rwsem_down_write_slowpath
+     0.02%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] schedule_preempt_disabled
+     0.02%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] ret_from_fork_asm
+     0.02%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] ret_from_fork
+     0.02%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] schedule_tail
+     0.02%     0.02%  matrix_mul_thre  [kernel.kallsyms]              [k] blk_cgroup_congested
+     0.02%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __folio_throttle_swaprate
+     0.02%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] sched_balance_softirq
+     0.02%     0.02%  matrix_mul_thre  [kernel.kallsyms]              [k] entry_SYSRETQ_unsafe_stack
+     0.01%     0.00%  perf-exec        [unknown]                      [k] 0x00007a329a4eef3b
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] entry_SYSCALL_64_after_hwframe
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] do_syscall_64
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] x64_sys_call
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] __x64_sys_execve
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] do_execveat_common.isra.0
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] bprm_execve
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] bprm_execve.part.0
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] exec_binprm
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] search_binary_handler
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] load_elf_binary
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] perf_event_enable_on_exec
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] begin_new_exec
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] perf_event_exec
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] asm_sysvec_apic_timer_interrupt
+     0.01%     0.01%  perf-exec        [kernel.kallsyms]              [k] update_curr_se
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] sysvec_apic_timer_interrupt
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] __sysvec_apic_timer_interrupt
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] hrtimer_interrupt
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] __hrtimer_run_queues
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] tick_nohz_handler
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] update_process_times
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] sched_tick
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] task_tick_fair
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]              [k] update_curr
+     0.01%     0.01%  matrix_mul_thre  [kernel.kallsyms]              [k] lock_vma_under_rcu
+     0.01%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x0000000000000002
+     0.01%     0.01%  matrix_mul_thre  [kernel.kallsyms]              [k] __lruvec_stat_mod_folio
+     0.01%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __folio_mod_stat
+     0.01%     0.01%  matrix_mul_thre  [kernel.kallsyms]              [k] end_repeat_nmi
+     0.00%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00005d0445d4a9c0
+     0.00%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007b76cb5fb000
+     0.00%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] nmi_cpu_backtrace
+     0.00%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] intel_pmu_handle_irq
+     0.00%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x0000000000000041
+     0.00%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] pv_native_write_cr2
+     0.00%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] _raw_spin_lock_irq
+     0.00%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] calculate_sigpending
+     0.00%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] sched_clock
+     0.00%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] perf_event_nmi_handler
+     0.00%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] nmi_cpu_backtrace_handler
+     0.00%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] native_sched_clock
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]              [k] native_write_msr
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]              [k] ctx_resched
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]              [k] perf_ctx_enable
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]              [k] x86_pmu_enable
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]              [k] intel_pmu_enable_all
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]              [k] perf_event_nmi_handler
+     0.00%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] sched_clock_noinstr
+     0.00%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] __intel_pmu_enable_all.isra.0
+     0.00%     0.00%  matrix_mul_thre  [kernel.kallsyms]              [k] intel_bts_enable_local
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]              [k] __intel_pmu_enable_all.isra.0
+     0.00%     0.00%  matrix_mul_thre  [unknown]                      [k] 0x00007ffe16208e50
+     0.00%     0.00%  matrix_mul_thre  ld-linux-x86-64.so.2           [.] _dl_allocate_tls
+     0.00%     0.00%  matrix_mul_thre  libc.so.6                      [.] __libc_calloc
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

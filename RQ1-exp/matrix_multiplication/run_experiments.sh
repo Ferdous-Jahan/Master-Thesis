@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Ensure required directories exist
-mkdir -p gprof_analysis valgrind_analysis
+mkdir -p gprof_analysis valgrind_analysis perf_analysis
 
 # List of C++ files
 files=(
@@ -58,6 +58,15 @@ for cpp_version in c++17 c++23; do
       rm $massif_file
     done
 
+    echo "Compiling $file for Perf..."
+    g++ $flags -std=$cpp_version $file $pthread_flag -o ${exec}_perf
+
+    for run in {1..5}; do
+      echo "Perf profiling run $run for ${exec}_perf"
+      sudo perf record -g -o ./perf_analysis/${exec}_run${run}_perf.data ./${exec}_perf
+      sudo perf report -g --stdio -i ./perf_analysis/${exec}_run${run}_perf.data >./perf_analysis/${exec}_run${run}_perf.txt
+    done
+
     echo "Finished profiling for $exec with standard $cpp_version"
     echo "-----------------------------------------------"
   done
@@ -67,4 +76,4 @@ done
 rm matrix_mul_par_* matrix_mul_par_unseq_* matrix_mul_threads_* matrix_mul_pthreads_*
 
 # Done
-echo "All profiling completed successfully! Execution times are stored in execution_times.csv"
+echo "All profiling (Gprof, Valgrind Massif, Perf) completed successfully! Execution times and profiling results stored appropriately."
