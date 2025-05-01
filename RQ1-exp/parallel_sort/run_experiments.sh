@@ -3,9 +3,6 @@
 # Ensure required directories exist
 mkdir -p gprof_analysis valgrind_analysis
 
-# Output CSV file for execution times
-echo "implementation,cpp_standard,run,execution_time_seconds" > execution_times.csv
-
 # List of C++ files
 files=(
   "parallel_sort_execution_policy_par.cpp"
@@ -45,11 +42,9 @@ for cpp_version in c++17 c++23; do
 
     for run in {1..5}; do
       echo "Gprof profiling run $run for $exec"
-      exec_time=$(./$exec | grep -oP '[0-9]+\.[0-9]+(?= seconds)')
-      echo "$exec,$cpp_version,$run,$exec_time" >> execution_times.csv
-
+      ./$exec
       mv gmon.out gmon_${exec}_run${run}.out
-      gprof $exec gmon_${exec}_run${run}.out > ./gprof_analysis/${exec}_run${run}_gprof.txt
+      gprof $exec gmon_${exec}_run${run}.out >./gprof_analysis/${exec}_run${run}_gprof.txt
     done
 
     echo "Compiling $file for Valgrind Massif..."
@@ -59,7 +54,7 @@ for cpp_version in c++17 c++23; do
       echo "Valgrind Massif profiling run $run for ${exec}_massif"
       valgrind --tool=massif ./${exec}_massif
       massif_file=$(ls massif.out.*)
-      ms_print $massif_file > ./valgrind_analysis/${exec}_run${run}_valgrind_massif.txt
+      ms_print $massif_file >./valgrind_analysis/${exec}_run${run}_valgrind_massif.txt
       rm $massif_file
     done
 
@@ -70,7 +65,6 @@ done
 
 # Cleanup binaries
 rm parallel_sort_par_* parallel_sort_par_unseq_* parallel_sort_threads_* parallel_sort_pthreads_*
-
 
 # Done
 echo "All profiling completed successfully! Execution times are stored in execution_times.csv"
