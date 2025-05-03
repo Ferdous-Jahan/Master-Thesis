@@ -22,8 +22,8 @@ executables=(
 # Compiler flags
 flags="-O2 -g"
 
-# Run for both C++17 and C++23 standards
-for cpp_version in c++17 c++23; do
+# Run for both C++17, C++20 and C++23 standards
+for cpp_version in c++17 c++20 c++23; do
   echo "Running experiments with standard $cpp_version"
 
   for i in ${!files[@]}; do

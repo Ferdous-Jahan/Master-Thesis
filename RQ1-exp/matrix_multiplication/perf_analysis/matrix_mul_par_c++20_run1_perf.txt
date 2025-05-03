@@ -1,0 +1,368 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 839  of event 'cycles:P'
+# Event count (approx.): 620986879
+#
+# Children      Self  Command          Shared Object              Symbol                                                                                                                                                                                                                                                                                   
+# ........  ........  ...............  .........................  .........................................................................................................................................................................................................................................................................................
+#
+    94.12%     0.00%  matrix_mul_par_  [unknown]                  [.] 0x4016202de6ebfd85
+            |
+            ---0x4016202de6ebfd85
+               0x6085884163a0
+               0x6085884153f0
+               parallel_multiply(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&)
+
+    94.12%     0.00%  matrix_mul_par_  [unknown]                  [.] 0x00006085884163a0
+            |
+            ---0x6085884163a0
+               0x6085884153f0
+               parallel_multiply(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&)
+
+    94.12%     0.00%  matrix_mul_par_  [unknown]                  [.] 0x00006085884153f0
+            |
+            ---0x6085884153f0
+               parallel_multiply(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&)
+
+    94.12%    93.91%  matrix_mul_par_  matrix_mul_par_c++20_perf  [.] parallel_multiply(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&)
+            |          
+             --93.91%--0x4016202de6ebfd85
+                       0x6085884163a0
+                       0x6085884153f0
+                       parallel_multiply(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&)
+
+     3.24%     0.00%  matrix_mul_par_  [unknown]                  [.] 0x0000000000000fb1
+            |
+            ---0xfb1
+               |          
+               |--2.64%--generate_matrix(unsigned long, unsigned long)
+               |          
+                --0.60%--std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+
+     2.64%     2.64%  matrix_mul_par_  matrix_mul_par_c++20_perf  [.] generate_matrix(unsigned long, unsigned long)
+            |
+            ---0xfb1
+               generate_matrix(unsigned long, unsigned long)
+
+     1.43%     0.00%  matrix_mul_par_  libc.so.6                  [.] malloc
+            |
+            ---malloc
+               |          
+                --1.32%--_int_malloc
+                          |          
+                           --1.20%--asm_exc_page_fault
+                                     |          
+                                      --0.96%--exc_page_fault
+                                                |          
+                                                 --0.84%--do_user_addr_fault
+                                                           handle_mm_fault
+                                                           |          
+                                                            --0.59%--__handle_mm_fault
+                                                                      handle_pte_fault
+
+     1.43%     0.24%  matrix_mul_par_  libc.so.6                  [.] _int_malloc
+            |          
+             --1.20%--_int_malloc
+                       |          
+                        --0.96%--asm_exc_page_fault
+                                  exc_page_fault
+                                  |          
+                                   --0.84%--do_user_addr_fault
+                                             handle_mm_fault
+                                             |          
+                                              --0.59%--__handle_mm_fault
+                                                        handle_pte_fault
+
+     1.32%     0.00%  matrix_mul_par_  matrix_mul_par_c++20_perf  [.] std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::vector(unsigned long, std::vector<double, std::allocator<double> > const&, std::allocator<std::vector<double, std::allocator<double> > > const&)
+            |
+            ---std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::vector(unsigned long, std::vector<double, std::allocator<double> > const&, std::allocator<std::vector<double, std::allocator<double> > > const&)
+               operator new(unsigned long)
+               malloc
+               _int_malloc
+               |          
+                --1.20%--asm_exc_page_fault
+                          |          
+                           --0.96%--exc_page_fault
+                                     |          
+                                      --0.84%--do_user_addr_fault
+                                                handle_mm_fault
+                                                |          
+                                                 --0.59%--__handle_mm_fault
+                                                           handle_pte_fault
+
+     1.32%     0.00%  matrix_mul_par_  libstdc++.so.6.0.33        [.] operator new(unsigned long)
+            |
+            ---operator new(unsigned long)
+               malloc
+               _int_malloc
+               |          
+                --1.20%--asm_exc_page_fault
+                          |          
+                           --0.96%--exc_page_fault
+                                     |          
+                                      --0.84%--do_user_addr_fault
+                                                handle_mm_fault
+                                                |          
+                                                 --0.59%--__handle_mm_fault
+                                                           handle_pte_fault
+
+     1.20%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] asm_exc_page_fault
+            |
+            ---asm_exc_page_fault
+               |          
+                --0.96%--exc_page_fault
+                          |          
+                           --0.84%--do_user_addr_fault
+                                     handle_mm_fault
+                                     |          
+                                      --0.59%--__handle_mm_fault
+                                                handle_pte_fault
+
+     0.96%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] exc_page_fault
+            |
+            ---exc_page_fault
+               |          
+                --0.84%--do_user_addr_fault
+                          handle_mm_fault
+                          |          
+                           --0.59%--__handle_mm_fault
+                                     handle_pte_fault
+
+     0.84%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] do_user_addr_fault
+            |
+            ---do_user_addr_fault
+               handle_mm_fault
+               |          
+                --0.59%--__handle_mm_fault
+                          handle_pte_fault
+
+     0.84%     0.12%  matrix_mul_par_  [kernel.kallsyms]          [k] handle_mm_fault
+            |          
+             --0.72%--handle_mm_fault
+                       |          
+                        --0.59%--__handle_mm_fault
+                                  handle_pte_fault
+
+     0.81%     0.11%  matrix_mul_par_  [kernel.kallsyms]          [k] entry_SYSCALL_64_after_hwframe
+            |          
+             --0.70%--entry_SYSCALL_64_after_hwframe
+                       do_syscall_64
+                       x64_sys_call
+
+     0.70%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] do_syscall_64
+            |
+            ---do_syscall_64
+               x64_sys_call
+
+     0.70%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] x64_sys_call
+            |
+            ---x64_sys_call
+
+     0.60%     0.60%  matrix_mul_par_  matrix_mul_par_c++20_perf  [.] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+            |
+            ---0xfb1
+               std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+
+     0.59%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __handle_mm_fault
+            |
+            ---__handle_mm_fault
+               handle_pte_fault
+
+     0.59%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] handle_pte_fault
+            |
+            ---handle_pte_fault
+
+     0.58%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] _dl_start_user
+            |
+            ---_dl_start_user
+
+     0.51%     0.00%  matrix_mul_par_  libc.so.6                  [.] __default_morecore@GLIBC_2.2.5
+            |
+            ---__default_morecore@GLIBC_2.2.5
+               __brk
+
+     0.51%     0.00%  matrix_mul_par_  libc.so.6                  [.] __brk
+            |
+            ---__brk
+
+     0.48%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] do_anonymous_page
+     0.46%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] _dl_start
+     0.46%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] _dl_sysdep_start
+     0.46%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] dl_main
+     0.39%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __x64_sys_brk
+     0.36%     0.24%  matrix_mul_par_  [kernel.kallsyms]          [k] folio_add_lru
+     0.36%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] folio_add_lru_vma
+     0.27%     0.00%  matrix_mul_par_  matrix_mul_par_c++20_perf  [.] std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::~vector()
+     0.27%     0.00%  matrix_mul_par_  libc.so.6                  [.] cfree@GLIBC_2.2.5
+     0.27%     0.00%  matrix_mul_par_  libc.so.6                  [.] systrim.constprop.0
+     0.27%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __do_sys_brk
+     0.27%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] do_vmi_align_munmap
+     0.27%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] unmap_region
+     0.27%     0.14%  matrix_mul_par_  [kernel.kallsyms]          [k] zap_pte_range
+     0.27%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] unmap_vmas
+     0.27%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] unmap_single_vma
+     0.27%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] unmap_page_range
+     0.27%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] zap_pmd_range.isra.0
+     0.24%     0.12%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] _dl_lookup_symbol_x
+     0.24%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] _dl_relocate_object
+     0.22%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] _dl_map_object_deps
+     0.22%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] _dl_catch_exception
+     0.22%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] openaux
+     0.22%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] _dl_map_object
+     0.14%     0.00%  matrix_mul_par_  [unknown]                  [k] 0x000000000020ac11
+     0.14%     0.14%  matrix_mul_par_  libc.so.6                  [.] _IO_fwrite
+     0.14%     0.00%  matrix_mul_par_  [unknown]                  [.] 0x40179bf04658893e
+     0.14%     0.00%  matrix_mul_par_  [unknown]                  [.] 0x00006085882290f0
+     0.14%     0.00%  matrix_mul_par_  [unknown]                  [.] 0x0000608588228140
+     0.14%     0.00%  matrix_mul_par_  matrix_mul_par_c++20_perf  [.] main
+     0.14%     0.00%  matrix_mul_par_  libstdc++.so.6.0.33        [.] std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+     0.14%     0.00%  matrix_mul_par_  libstdc++.so.6.0.33        [.] std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+     0.14%     0.14%  matrix_mul_par_  [kernel.kallsyms]          [k] __free_one_page
+     0.14%     0.00%  matrix_mul_par_  [unknown]                  [k] 0x000000000020aec1
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] tlb_finish_mmu
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __tlb_batch_free_encoded_pages
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] free_pages_and_swap_cache
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] folios_put_refs
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] free_unref_folios
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] free_unref_page_commit
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] free_pcppages_bulk
+     0.14%     0.14%  matrix_mul_par_  [kernel.kallsyms]          [k] zap_present_ptes
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __x64_sys_exit_group
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] do_group_exit
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] do_exit
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] exit_mm
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] mmput
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __mmput
+     0.14%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] exit_mmap
+     0.13%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] irqentry_exit
+     0.13%     0.12%  matrix_mul_par_  [kernel.kallsyms]          [k] irqentry_exit_to_user_mode
+     0.12%     0.12%  matrix_mul_par_  libc.so.6                  [.] __memmove_avx_unaligned_erms
+     0.12%     0.12%  matrix_mul_par_  [kernel.kallsyms]          [k] __count_memcg_events
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] count_memcg_events.constprop.0
+     0.12%     0.12%  matrix_mul_par_  [kernel.kallsyms]          [k] __pte_offset_map
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] pte_offset_map_nolock
+     0.12%     0.12%  matrix_mul_par_  [kernel.kallsyms]          [k] mas_prev
+     0.12%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] _dl_init
+     0.12%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] call_init.part.0
+     0.12%     0.00%  matrix_mul_par_  libstdc++.so.6.0.33        [.] 0x00007010cc4b738f
+     0.12%     0.00%  matrix_mul_par_  libc.so.6                  [.] tcache_init.part.0
+     0.12%     0.12%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] strcmp
+     0.12%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] do_lookup_x
+     0.12%     0.12%  matrix_mul_par_  [kernel.kallsyms]          [k] xas_start
+     0.12%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] __GI___read_nocancel
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __x64_sys_read
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] ksys_read
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] vfs_read
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] ext4_file_read_iter
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] generic_file_read_iter
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] filemap_read
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] filemap_get_pages
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] filemap_get_read_batch
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] xas_load
+     0.12%     0.12%  matrix_mul_par_  [kernel.kallsyms]          [k] error_entry
+     0.12%     0.12%  matrix_mul_par_  [kernel.kallsyms]          [k] lru_gen_add_folio
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] folio_batch_move_lru
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] lru_add_fn
+     0.12%     0.12%  matrix_mul_par_  [kernel.kallsyms]          [k] clear_page_erms
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] alloc_anon_folio
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] vma_alloc_folio_noprof
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] folio_alloc_mpol_noprof
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] alloc_pages_mpol_noprof
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __alloc_pages_noprof
+     0.12%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] get_page_from_freelist
+     0.11%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] asm_sysvec_apic_timer_interrupt
+     0.11%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] sysvec_apic_timer_interrupt
+     0.11%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] _dl_load_cache_lookup
+     0.11%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] _dl_sysdep_read_whole_file
+     0.11%     0.00%  matrix_mul_par_  ld-linux-x86-64.so.2       [.] mmap64
+     0.10%     0.10%  matrix_mul_par_  [kernel.kallsyms]          [k] hrtimer_interrupt
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __sysvec_apic_timer_interrupt
+     0.10%     0.10%  matrix_mul_par_  [kernel.kallsyms]          [k] enqueue_timer
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] asm_common_interrupt
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] common_interrupt
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] irq_exit_rcu
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __irq_exit_rcu
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] handle_softirqs
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] tasklet_action
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] workqueue_softirq_action
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] bh_worker
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] process_one_work
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] usb_giveback_urb_bh
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __usb_hcd_giveback_urb
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] xhci_unmap_urb_for_dma
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] usb_hcd_unmap_urb_for_dma
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] dma_unmap_page_attrs
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] iommu_dma_unmap_page
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __iommu_dma_unmap
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] iommu_dma_free_iova
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] queue_iova
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] mod_timer
+     0.10%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __mod_timer
+     0.06%     0.06%  matrix_mul_par_  [kernel.kallsyms]          [k] perf_event_mmap_output
+     0.06%     0.00%  matrix_mul_par_  [unknown]                  [k] 0x00007b907b6eef3b
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __x64_sys_execve
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] do_execveat_common.isra.0
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] bprm_execve
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] bprm_execve.part.0
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] exec_binprm
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] search_binary_handler
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] load_elf_binary
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] elf_load
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] vm_mmap
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] vm_mmap_pgoff
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] do_mmap
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] mmap_region
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] perf_event_mmap
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] perf_event_mmap_event
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] perf_iterate_sb.constprop.0
+     0.06%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] perf_iterate_ctx
+     0.02%     0.00%  perf-exec        [unknown]                  [k] 0x00007b907b6eef3b
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] entry_SYSCALL_64_after_hwframe
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] do_syscall_64
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] x64_sys_call
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] __x64_sys_execve
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] do_execveat_common.isra.0
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] bprm_execve
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] bprm_execve.part.0
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] exec_binprm
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] search_binary_handler
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] load_elf_binary
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] begin_new_exec
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] perf_event_exec
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] perf_event_enable_on_exec
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] asm_sysvec_apic_timer_interrupt
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] sysvec_apic_timer_interrupt
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] __sysvec_apic_timer_interrupt
+     0.02%     0.00%  perf-exec        [kernel.kallsyms]          [k] hrtimer_interrupt
+     0.01%     0.01%  perf-exec        [kernel.kallsyms]          [k] __hrtimer_next_event_base
+     0.01%     0.00%  perf-exec        [kernel.kallsyms]          [k] hrtimer_update_next_event
+     0.01%     0.01%  matrix_mul_par_  [kernel.kallsyms]          [k] __get_user_8
+     0.01%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __rseq_handle_notify_resume
+     0.01%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] rseq_ip_fixup
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]          [k] ktime_get
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]          [k] __hrtimer_run_queues
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]          [k] native_write_msr
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]          [k] ctx_resched
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]          [k] perf_ctx_enable
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]          [k] x86_pmu_enable
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]          [k] intel_pmu_enable_all
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]          [k] exc_nmi
+     0.00%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] native_write_msr
+     0.00%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] schedule
+     0.00%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __schedule
+     0.00%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] finish_task_switch.isra.0
+     0.00%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] __perf_event_task_sched_in
+     0.00%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] perf_ctx_enable
+     0.00%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] x86_pmu_enable
+     0.00%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] intel_pmu_enable_all
+     0.00%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] nmi_handle
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]          [k] native_apic_msr_write
+     0.00%     0.00%  matrix_mul_par_  [kernel.kallsyms]          [k] intel_bts_enable_local
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

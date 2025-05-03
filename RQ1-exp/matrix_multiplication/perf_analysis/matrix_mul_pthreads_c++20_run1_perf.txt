@@ -1,0 +1,438 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 3K of event 'cycles:P'
+# Event count (approx.): 2404397163
+#
+# Children      Self  Command          Shared Object                   Symbol                                                                                                                                                                                                                                                                                                 
+# ........  ........  ...............  ..............................  .......................................................................................................................................................................................................................................................................................................
+#
+    98.15%    96.26%  matrix_mul_pthr  matrix_mul_pthreads_c++20_perf  [.] multiply_worker(void*)
+            |
+            ---multiply_worker(void*)
+               |          
+                --1.44%--asm_sysvec_apic_timer_interrupt
+                          sysvec_apic_timer_interrupt
+                          |          
+                           --1.26%--__sysvec_apic_timer_interrupt
+                                     |          
+                                      --1.20%--hrtimer_interrupt
+                                                |          
+                                                 --1.05%--__hrtimer_run_queues
+                                                           |          
+                                                            --0.91%--tick_nohz_handler
+                                                                      update_process_times
+                                                                      |          
+                                                                       --0.73%--sched_tick
+                                                                                 |          
+                                                                                  --0.59%--task_tick_fair
+
+     1.49%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] asm_sysvec_apic_timer_interrupt
+            |
+            ---asm_sysvec_apic_timer_interrupt
+               sysvec_apic_timer_interrupt
+               |          
+                --1.32%--__sysvec_apic_timer_interrupt
+                          |          
+                           --1.25%--hrtimer_interrupt
+                                     |          
+                                      --1.11%--__hrtimer_run_queues
+                                                |          
+                                                 --0.96%--tick_nohz_handler
+                                                           |          
+                                                            --0.94%--update_process_times
+                                                                      |          
+                                                                       --0.76%--sched_tick
+                                                                                 |          
+                                                                                  --0.62%--task_tick_fair
+
+     1.49%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] sysvec_apic_timer_interrupt
+            |
+            ---sysvec_apic_timer_interrupt
+               |          
+                --1.32%--__sysvec_apic_timer_interrupt
+                          |          
+                           --1.25%--hrtimer_interrupt
+                                     |          
+                                      --1.11%--__hrtimer_run_queues
+                                                |          
+                                                 --0.96%--tick_nohz_handler
+                                                           |          
+                                                            --0.94%--update_process_times
+                                                                      |          
+                                                                       --0.76%--sched_tick
+                                                                                 |          
+                                                                                  --0.62%--task_tick_fair
+
+     1.32%     0.06%  matrix_mul_pthr  [kernel.kallsyms]               [k] __sysvec_apic_timer_interrupt
+            |          
+             --1.25%--__sysvec_apic_timer_interrupt
+                       hrtimer_interrupt
+                       |          
+                        --1.11%--__hrtimer_run_queues
+                                  |          
+                                   --0.96%--tick_nohz_handler
+                                             |          
+                                              --0.94%--update_process_times
+                                                        |          
+                                                         --0.76%--sched_tick
+                                                                   |          
+                                                                    --0.62%--task_tick_fair
+
+     1.28%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] hrtimer_interrupt
+            |          
+             --1.25%--hrtimer_interrupt
+                       |          
+                        --1.11%--__hrtimer_run_queues
+                                  |          
+                                   --0.96%--tick_nohz_handler
+                                             |          
+                                              --0.94%--update_process_times
+                                                        |          
+                                                         --0.76%--sched_tick
+                                                                   |          
+                                                                    --0.62%--task_tick_fair
+
+     1.11%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __hrtimer_run_queues
+            |
+            ---__hrtimer_run_queues
+               |          
+                --0.96%--tick_nohz_handler
+                          |          
+                           --0.94%--update_process_times
+                                     |          
+                                      --0.76%--sched_tick
+                                                |          
+                                                 --0.62%--task_tick_fair
+
+     0.96%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] tick_nohz_handler
+            |
+            ---tick_nohz_handler
+               |          
+                --0.94%--update_process_times
+                          |          
+                           --0.76%--sched_tick
+                                     |          
+                                      --0.62%--task_tick_fair
+
+     0.94%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] update_process_times
+            |          
+             --0.91%--update_process_times
+                       |          
+                        --0.76%--sched_tick
+                                  |          
+                                   --0.62%--task_tick_fair
+
+     0.76%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] sched_tick
+            |
+            ---sched_tick
+               |          
+                --0.62%--task_tick_fair
+
+     0.73%     0.00%  matrix_mul_pthr  [unknown]                       [.] 0x0000000000000fb1
+            |
+            ---0xfb1
+               |          
+                --0.67%--generate_matrix(unsigned long, unsigned long)
+
+     0.67%     0.62%  matrix_mul_pthr  matrix_mul_pthreads_c++20_perf  [.] generate_matrix(unsigned long, unsigned long)
+            |          
+             --0.62%--0xfb1
+                       generate_matrix(unsigned long, unsigned long)
+
+     0.62%     0.09%  matrix_mul_pthr  [kernel.kallsyms]               [k] task_tick_fair
+            |          
+             --0.53%--task_tick_fair
+
+     0.44%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_start_user
+     0.41%     0.00%  matrix_mul_pthr  matrix_mul_pthreads_c++20_perf  [.] std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::vector(unsigned long, std::vector<double, std::allocator<double> > const&, std::allocator<std::vector<double, std::allocator<double> > > const&)
+     0.41%     0.00%  matrix_mul_pthr  libstdc++.so.6.0.33             [.] operator new(unsigned long)
+     0.41%     0.00%  matrix_mul_pthr  libc.so.6                       [.] malloc
+     0.41%     0.00%  matrix_mul_pthr  libc.so.6                       [.] _int_malloc
+     0.41%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_start
+     0.41%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_sysdep_start
+     0.38%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] dl_main
+     0.33%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] asm_exc_page_fault
+     0.33%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] exc_page_fault
+     0.30%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] do_user_addr_fault
+     0.29%     0.17%  matrix_mul_pthr  [kernel.kallsyms]               [k] update_load_avg
+     0.28%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] entry_SYSCALL_64_after_hwframe
+     0.28%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] do_syscall_64
+     0.28%     0.01%  matrix_mul_pthr  [kernel.kallsyms]               [k] x64_sys_call
+     0.27%     0.27%  matrix_mul_pthr  [kernel.kallsyms]               [k] __irqentry_text_end
+     0.25%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] handle_mm_fault
+     0.22%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] __handle_mm_fault
+     0.21%     0.15%  matrix_mul_pthr  [kernel.kallsyms]               [k] update_curr
+     0.20%     0.11%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_relocate_object
+     0.16%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] handle_pte_fault
+     0.14%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] irqentry_exit
+     0.14%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] irqentry_exit_to_user_mode
+     0.14%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] do_anonymous_page
+     0.13%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] do_vmi_align_munmap
+     0.12%     0.12%  matrix_mul_pthr  [kernel.kallsyms]               [k] __update_load_avg_cfs_rq
+     0.12%     0.12%  matrix_mul_pthr  [kernel.kallsyms]               [k] account_user_time
+     0.12%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] account_process_tick
+     0.11%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] schedule
+     0.11%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __schedule
+     0.11%     0.01%  matrix_mul_pthr  libc.so.6                       [.] clone3
+     0.11%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] asm_sysvec_reschedule_ipi
+     0.11%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] sysvec_reschedule_ipi
+     0.11%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] tick_program_event
+     0.11%     0.11%  matrix_mul_pthr  [kernel.kallsyms]               [k] native_irq_return_iret
+     0.11%     0.11%  matrix_mul_pthr  [kernel.kallsyms]               [k] clear_page_erms
+     0.11%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] alloc_anon_folio
+     0.11%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] vma_alloc_folio_noprof
+     0.11%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] folio_alloc_mpol_noprof
+     0.11%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] alloc_pages_mpol_noprof
+     0.11%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __alloc_pages_noprof
+     0.11%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] get_page_from_freelist
+     0.10%     0.03%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_lookup_symbol_x
+     0.10%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __x64_sys_mprotect
+     0.10%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] do_mprotect_pkey
+     0.10%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] mprotect_fixup
+     0.10%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] unmap_region
+     0.09%     0.09%  matrix_mul_pthr  [kernel.kallsyms]               [k] sync_regs
+     0.09%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] irq_exit_rcu
+     0.09%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __irq_exit_rcu
+     0.09%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] handle_softirqs
+     0.09%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] clockevents_program_event
+     0.08%     0.00%  matrix_mul_pthr  matrix_mul_pthreads_c++20_perf  [.] pthread_multiply(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, unsigned long)
+     0.08%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] perf_event_task_tick
+     0.07%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] mprotect
+     0.07%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] do_vmi_munmap
+     0.07%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] vma_modify
+     0.07%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __split_vma
+     0.06%     0.06%  matrix_mul_pthr  [kernel.kallsyms]               [k] fw_domains_get_with_fallback
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] tasklet_hi_action
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] tasklet_action_common.isra.0
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] execlists_submission_tasklet
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] execlists_dequeue_irq
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] asm_sysvec_irq_work
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] sysvec_irq_work
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __sysvec_irq_work
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] irq_work_run
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] irq_work_run_list
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] irq_work_single
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] signal_irq_work
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] irq_enable
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] intel_engine_irq_enable
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] gen8_logical_ring_enable_irq
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] fwtable_write32
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] ___force_wake_auto
+     0.06%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] psi_task_switch
+     0.06%     0.06%  matrix_mul_pthr  [kernel.kallsyms]               [k] _raw_spin_lock
+     0.06%     0.00%  matrix_mul_pthr  matrix_mul_pthreads_c++20_perf  [.] std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::~vector()
+     0.06%     0.00%  matrix_mul_pthr  libc.so.6                       [.] cfree@GLIBC_2.2.5
+     0.06%     0.00%  matrix_mul_pthr  libc.so.6                       [.] _int_free
+     0.06%     0.00%  matrix_mul_pthr  libc.so.6                       [.] systrim.constprop.0
+     0.06%     0.00%  matrix_mul_pthr  libc.so.6                       [.] __default_morecore@GLIBC_2.2.5
+     0.06%     0.00%  matrix_mul_pthr  libc.so.6                       [.] __brk
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __x64_sys_brk
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __do_sys_brk
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] tlb_finish_mmu
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __tlb_batch_free_encoded_pages
+     0.06%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] update_curr_se
+     0.06%     0.06%  matrix_mul_pthr  [kernel.kallsyms]               [k] lapic_next_deadline
+     0.06%     0.06%  matrix_mul_pthr  [kernel.kallsyms]               [k] timerqueue_add
+     0.06%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] enqueue_hrtimer
+     0.05%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] pick_next_task
+     0.05%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] pick_next_task_fair
+     0.05%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] put_prev_entity
+     0.05%     0.00%  matrix_mul_pthr  libc.so.6                       [.] pthread_create@GLIBC_2.2.5
+     0.05%     0.00%  matrix_mul_pthr  libc.so.6                       [.] create_thread
+     0.05%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] perf_adjust_freq_unthr_context
+     0.05%     0.05%  matrix_mul_pthr  matrix_mul_pthreads_c++20_perf  [.] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()
+     0.05%     0.00%  matrix_mul_pthr  [unknown]                       [k] 0000000000000000
+     0.04%     0.04%  matrix_mul_pthr  [kernel.kallsyms]               [k] __pte_offset_map_lock
+     0.04%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_map_object_deps
+     0.04%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_catch_exception
+     0.04%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] openaux
+     0.04%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_map_object
+     0.04%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_map_object_from_fd
+     0.04%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] mmap64
+     0.04%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __x64_sys_mmap
+     0.04%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] ksys_mmap_pgoff
+     0.04%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] vm_mmap_pgoff
+     0.04%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] do_mmap
+     0.04%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] mmap_region
+     0.04%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] unmap_vmas
+     0.04%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] unmap_single_vma
+     0.04%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] unmap_page_range
+     0.04%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] zap_pmd_range.isra.0
+     0.04%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] zap_pte_range
+     0.04%     0.04%  matrix_mul_pthr  [kernel.kallsyms]               [k] mas_wr_bnode
+     0.04%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] vma_complete
+     0.04%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] mas_store_prealloc
+     0.04%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] mas_wr_store_entry
+     0.04%     0.04%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] __minimal_calloc
+     0.04%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_init_paths
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] ktime_get_update_offsets_now
+     0.03%     0.03%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] do_lookup_x
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] native_write_msr
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] x86_pmu_enable
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] intel_pmu_enable_all
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] syscall_return_via_sysret
+     0.03%     0.00%  matrix_mul_pthr  libc.so.6                       [.] __madvise
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] rcu_pending
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] rcu_sched_clock_irq
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] asm_common_interrupt
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] common_interrupt
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] _raw_spin_unlock_irqrestore
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] nohz_balance_exit_idle
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] sched_balance_trigger
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] nohz_balancer_kick
+     0.03%     0.00%  matrix_mul_pthr  [unknown]                       [.] 0x0000000000000151
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] hrtimer_active
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] perf_event_mmap
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] perf_event_mmap_event
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] memset_orig
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __common_interrupt
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] handle_edge_irq
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] psi_group_change
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] rb_next
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __remove_hrtimer
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] select_task_rq_fair
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] hrtimer_wakeup
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] wake_up_process
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] try_to_wake_up
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] select_task_rq
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] __update_load_avg_se
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] update_min_vruntime
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] read_tsc
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] lru_gen_del_folio.constprop.0
+     0.03%     0.00%  matrix_mul_pthr  [unknown]                       [k] 0x00000000001fd961
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] free_swap_cache
+     0.03%     0.00%  matrix_mul_pthr  [unknown]                       [k] 0x000000000020ac11
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] place_entity
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __x64_sys_clone3
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __do_sys_clone3
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] kernel_clone
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] copy_process
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] free_pages_and_swap_cache
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] folios_put_refs
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] sched_cgroup_fork
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __page_cache_release.part.0
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] task_fork_fair
+     0.03%     0.00%  matrix_mul_pthr  libc.so.6                       [.] __libc_early_init
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] update_cfs_group
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] restore_fpregs_from_fpstate
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] switch_fpu_return
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] mas_wr_end_piv
+     0.03%     0.00%  matrix_mul_pthr  libc.so.6                       [.] __mprotect
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] pud_val
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] rcu_segcblist_enqueue
+     0.03%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] munmap
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __x64_sys_munmap
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __vm_munmap
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] remove_vma
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] vm_area_free
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] call_rcu
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __call_rcu_common
+     0.03%     0.03%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_fixup
+     0.03%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_init
+     0.03%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] call_init.part.0
+     0.03%     0.00%  matrix_mul_pthr  libstdc++.so.6.0.33             [.] 0x000072bf99ab750c
+     0.03%     0.00%  matrix_mul_pthr  libstdc++.so.6.0.33             [.] std::ios_base_library_init()
+     0.03%     0.00%  matrix_mul_pthr  libstdc++.so.6.0.33             [.] std::locale::locale()
+     0.03%     0.00%  matrix_mul_pthr  libstdc++.so.6.0.33             [.] 0x000072bf99ae9884
+     0.03%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_runtime_resolve_xsavec
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] filemap_map_pages
+     0.03%     0.00%  matrix_mul_pthr  matrix_mul_pthreads_c++20_perf  [.] _start
+     0.03%     0.00%  matrix_mul_pthr  libc.so.6                       [.] __libc_start_main@@GLIBC_2.34
+     0.03%     0.00%  matrix_mul_pthr  libc.so.6                       [.] __libc_start_call_main
+     0.03%     0.00%  matrix_mul_pthr  libc.so.6                       [.] 0x000072bf99647bbe
+     0.03%     0.00%  matrix_mul_pthr  libc.so.6                       [.] __run_exit_handlers
+     0.03%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_fini
+     0.03%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_call_fini
+     0.03%     0.00%  matrix_mul_pthr  libstdc++.so.6.0.33             [.] 0x000072bf99ab7ac7
+     0.03%     0.00%  matrix_mul_pthr  libstdc++.so.6.0.33             [.] 0x000072bf99bd0060
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] do_fault
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] do_read_fault
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] irq_enter_rcu
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] __enqueue_entity
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] lock_vma_under_rcu
+     0.03%     0.03%  matrix_mul_pthr  libstdc++.so.6.0.33             [.] std::random_device::_M_fini()
+     0.03%     0.00%  matrix_mul_pthr  libstdc++.so.6.0.33             [.] 0x000072bf99aeb630
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] error_entry
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] __radix_tree_lookup
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] run_timer_softirq
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __run_timers
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] call_timer_fn
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] rps_timer
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] queue_work_on
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __queue_work
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __queue_work.part.0
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] idr_find
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] radix_tree_lookup
+     0.03%     0.03%  matrix_mul_pthr  [kernel.kallsyms]               [k] timekeeping_advance
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] tick_do_update_jiffies64
+     0.03%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] update_wall_time
+     0.02%     0.00%  matrix_mul_pthr  libc.so.6                       [.] start_thread
+     0.02%     0.02%  matrix_mul_pthr  [kernel.kallsyms]               [k] flush_tlb_func
+     0.02%     0.00%  matrix_mul_pthr  [unknown]                       [k] 0x00007b97d38eef3b
+     0.02%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __x64_sys_execve
+     0.02%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] do_execveat_common.isra.0
+     0.02%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] bprm_execve
+     0.02%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] bprm_execve.part.0
+     0.02%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] exec_binprm
+     0.02%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] search_binary_handler
+     0.02%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] load_elf_binary
+     0.02%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] setup_arg_pages
+     0.02%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] shift_arg_pages
+     0.02%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] move_page_tables
+     0.02%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] move_ptes.isra.0
+     0.02%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] flush_tlb_mm_range
+     0.01%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] ret_from_fork_asm
+     0.01%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] ret_from_fork
+     0.01%     0.01%  matrix_mul_pthr  [kernel.kallsyms]               [k] entry_SYSCALL_64
+     0.01%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] entry_SYSCALL_64_safe_stack
+     0.01%     0.01%  matrix_mul_pthr  libc.so.6                       [.] _itoa_word
+     0.01%     0.00%  matrix_mul_pthr  libc.so.6                       [.] name_stack_maps
+     0.01%     0.00%  matrix_mul_pthr  libc.so.6                       [.] __GI___snprintf
+     0.01%     0.00%  matrix_mul_pthr  libc.so.6                       [.] __vsnprintf_internal
+     0.01%     0.01%  matrix_mul_pthr  [kernel.kallsyms]               [k] syscall_exit_to_user_mode
+     0.01%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] finish_task_switch.isra.0
+     0.01%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] __perf_event_task_sched_in
+     0.01%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] perf_ctx_enable
+     0.01%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] schedule_tail
+     0.00%     0.00%  perf-exec        [unknown]                       [k] 0x00007b97d38eef3b
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] entry_SYSCALL_64_after_hwframe
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] do_syscall_64
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] x64_sys_call
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] __x64_sys_execve
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] do_execveat_common.isra.0
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] bprm_execve
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] bprm_execve.part.0
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] exec_binprm
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] search_binary_handler
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] load_elf_binary
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] begin_new_exec
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] perf_event_exec
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] perf_event_enable_on_exec
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] ktime_get_update_offsets_now
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] asm_sysvec_apic_timer_interrupt
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] sysvec_apic_timer_interrupt
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] __sysvec_apic_timer_interrupt
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] hrtimer_interrupt
+     0.00%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] pv_native_write_cr2
+     0.00%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] perf_sample_event_took
+     0.00%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] end_repeat_nmi
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] native_write_msr
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] ctx_resched
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] perf_ctx_enable
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] x86_pmu_enable
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] intel_pmu_enable_all
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] default_do_nmi
+     0.00%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] sched_clock
+     0.00%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] intel_bts_enable_local
+     0.00%     0.00%  perf-exec        [kernel.kallsyms]               [k] native_apic_msr_write
+     0.00%     0.00%  matrix_mul_pthr  [kernel.kallsyms]               [k] intel_pmu_handle_irq
+     0.00%     0.00%  matrix_mul_pthr  ld-linux-x86-64.so.2            [.] _dl_allocate_tls
+     0.00%     0.00%  matrix_mul_pthr  libc.so.6                       [.] __libc_calloc
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

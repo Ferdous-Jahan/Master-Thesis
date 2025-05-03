@@ -1,0 +1,408 @@
+--------------------------------------------------------------------------------
+Command:            ./parallel_sort_pthreads_c++20_massif
+Massif arguments:   (none)
+ms_print arguments: massif.out.49505
+--------------------------------------------------------------------------------
+
+
+    MB
+9.890^                                                                    ##  
+     |                                                                    #   
+     |                                                                    #   
+     |                                                                    #   
+     |                                                                    #   
+     |                                                                    #   
+     |                                                                    #   
+     |                                                               @ : :#   
+     |                                                               @ : :#   
+     |                                                      @        @ : :#   
+     |                          @                           @      ::@:: :#   
+     |                          @           :      :        @     :::@:: :#   
+     |                 :  :    :@           :     ::@  :@:::@: : ::::@:: :#   
+     |:::::::::::::::::::::::@::@::::::::::::::@::::@:::@:: @::::@:::@::::# : 
+     |:              : ::::::@::@:::::::: : :::@: ::@:::@:: @::::@:::@::::# : 
+     |:              : ::::::@::@:::::::: : :::@: ::@:::@:: @::::@:::@::::# : 
+     |:              : ::::::@::@:::::::: : :::@: ::@:::@:: @::::@:::@::::# : 
+     |:              : ::::::@::@:::::::: : :::@: ::@:::@:: @::::@:::@::::# : 
+     |:              : ::::::@::@:::::::: : :::@: ::@:::@:: @::::@:::@::::# : 
+     |:              : ::::::@::@:::::::: : :::@: ::@:::@:: @::::@:::@::::# : 
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   351.8
+
+Number of snapshots: 71
+ Detailed snapshots: [11, 14, 30, 35, 40, 45, 52, 60, 68 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      1,974,733        4,073,744        4,073,728            16            0
+  2     80,891,542        4,074,056        4,074,032            24            0
+  3     87,299,113        4,074,392        4,074,340            52            0
+  4     90,986,380        4,205,448        4,205,408            40            0
+  5     97,091,186        4,074,368        4,074,336            32            0
+  6    100,652,377        4,074,392        4,074,340            52            0
+  7    104,532,728        4,336,520        4,336,480            40            0
+  8    108,677,700        4,074,392        4,074,340            52            0
+  9    111,935,534        4,074,368        4,074,336            32            0
+ 10    116,766,687        4,074,368        4,074,336            32            0
+ 11    120,461,784        4,074,368        4,074,336            32            0
+100.00% (4,074,336B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.17% (4,000,000B) 0x1092D9: allocate (new_allocator.h:151)
+| ->98.17% (4,000,000B) 0x1092D9: allocate (allocator.h:198)
+|   ->98.17% (4,000,000B) 0x1092D9: allocate (alloc_traits.h:482)
+|     ->98.17% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:381)
+|       ->98.17% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:378)
+|         ->98.17% (4,000,000B) 0x1092D9: _M_create_storage (stl_vector.h:398)
+|           ->98.17% (4,000,000B) 0x1092D9: _Vector_base (stl_vector.h:335)
+|             ->98.17% (4,000,000B) 0x1092D9: vector (stl_vector.h:557)
+|               ->98.17% (4,000,000B) 0x1092D9: main (parallel_sort_pthreads.cpp:79)
+|                 
+->01.81% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->01.81% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->01.81% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->01.81% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->01.81% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.01% (608B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 12    125,330,081        4,074,368        4,074,336            32            0
+ 13    130,362,089        4,205,448        4,205,408            40            0
+ 14    136,966,127        5,647,248        5,647,200            48            0
+100.00% (5,647,200B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->70.83% (4,000,000B) 0x1092D9: allocate (new_allocator.h:151)
+| ->70.83% (4,000,000B) 0x1092D9: allocate (allocator.h:198)
+|   ->70.83% (4,000,000B) 0x1092D9: allocate (alloc_traits.h:482)
+|     ->70.83% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:381)
+|       ->70.83% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:378)
+|         ->70.83% (4,000,000B) 0x1092D9: _M_create_storage (stl_vector.h:398)
+|           ->70.83% (4,000,000B) 0x1092D9: _Vector_base (stl_vector.h:335)
+|             ->70.83% (4,000,000B) 0x1092D9: vector (stl_vector.h:557)
+|               ->70.83% (4,000,000B) 0x1092D9: main (parallel_sort_pthreads.cpp:79)
+|                 
+->27.85% (1,572,864B) 0x109EE5: allocate (new_allocator.h:151)
+| ->27.85% (1,572,864B) 0x109EE5: allocate (allocator.h:198)
+|   ->27.85% (1,572,864B) 0x109EE5: allocate (alloc_traits.h:482)
+|     ->27.85% (1,572,864B) 0x109EE5: _M_allocate (stl_vector.h:381)
+|       ->27.85% (1,572,864B) 0x109EE5: _M_allocate (stl_vector.h:378)
+|         ->27.85% (1,572,864B) 0x109EE5: _M_realloc_insert<int const&> (vector.tcc:459)
+|           ->27.85% (1,572,864B) 0x109EE5: push_back (stl_vector.h:1292)
+|             ->27.85% (1,572,864B) 0x109EE5: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_pthreads.cpp:21)
+|               ->27.85% (1,572,864B) 0x10A16E: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:67)
+|                 ->27.85% (1,572,864B) 0x10A1E5: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:55)
+|                 | ->27.85% (1,572,864B) 0x10A1E5: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:55)
+|                 |   ->27.85% (1,572,864B) 0x1093CC: main (parallel_sort_pthreads.cpp:88)
+|                 |     
+|                 ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                 
+->01.31% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->01.31% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->01.31% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->01.31% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->01.31% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.01% (608B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 15    142,826,518        4,074,680        4,074,640            40            0
+ 16    146,351,353        4,074,704        4,074,644            60            0
+ 17    151,160,853        4,074,704        4,074,648            56            0
+ 18    154,152,432        4,074,680        4,074,640            40            0
+ 19    159,009,547        4,074,680        4,074,640            40            0
+ 20    163,005,816        4,074,704        4,074,656            48            0
+ 21    169,026,683        4,074,680        4,074,640            40            0
+ 22    173,842,929        4,074,680        4,074,640            40            0
+ 23    178,747,905        4,076,736        4,076,688            48            0
+ 24    184,481,904        4,091,072        4,091,024            48            0
+ 25    188,878,427        4,074,944        4,074,896            48            0
+ 26    195,318,377        4,074,680        4,074,640            40            0
+ 27    198,910,838        5,123,264        5,123,216            48            0
+ 28    202,229,981        4,074,680        4,074,640            40            0
+ 29    208,601,203        4,074,704        4,074,644            60            0
+ 30    215,177,771        4,074,704        4,074,644            60            0
+100.00% (4,074,644B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.17% (4,000,000B) 0x1092D9: allocate (new_allocator.h:151)
+| ->98.17% (4,000,000B) 0x1092D9: allocate (allocator.h:198)
+|   ->98.17% (4,000,000B) 0x1092D9: allocate (alloc_traits.h:482)
+|     ->98.17% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:381)
+|       ->98.17% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:378)
+|         ->98.17% (4,000,000B) 0x1092D9: _M_create_storage (stl_vector.h:398)
+|           ->98.17% (4,000,000B) 0x1092D9: _Vector_base (stl_vector.h:335)
+|             ->98.17% (4,000,000B) 0x1092D9: vector (stl_vector.h:557)
+|               ->98.17% (4,000,000B) 0x1092D9: main (parallel_sort_pthreads.cpp:79)
+|                 
+->01.81% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->01.81% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->01.81% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->01.81% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->01.81% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.02% (916B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 31    220,060,337        4,074,704        4,074,644            60            0
+ 32    225,673,895        4,336,856        4,336,788            68            0
+ 33    230,720,273        4,598,976        4,598,928            48            0
+ 34    234,979,734        4,795,600        4,795,536            64            0
+ 35    237,890,521        4,599,000        4,598,932            68            0
+100.00% (4,598,932B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->86.98% (4,000,000B) 0x1092D9: allocate (new_allocator.h:151)
+| ->86.98% (4,000,000B) 0x1092D9: allocate (allocator.h:198)
+|   ->86.98% (4,000,000B) 0x1092D9: allocate (alloc_traits.h:482)
+|     ->86.98% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:381)
+|       ->86.98% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:378)
+|         ->86.98% (4,000,000B) 0x1092D9: _M_create_storage (stl_vector.h:398)
+|           ->86.98% (4,000,000B) 0x1092D9: _Vector_base (stl_vector.h:335)
+|             ->86.98% (4,000,000B) 0x1092D9: vector (stl_vector.h:557)
+|               ->86.98% (4,000,000B) 0x1092D9: main (parallel_sort_pthreads.cpp:79)
+|                 
+->11.40% (524,292B) 0x109EE5: allocate (new_allocator.h:151)
+| ->11.40% (524,292B) 0x109EE5: allocate (allocator.h:198)
+|   ->11.40% (524,292B) 0x109EE5: allocate (alloc_traits.h:482)
+|     ->11.40% (524,292B) 0x109EE5: _M_allocate (stl_vector.h:381)
+|       ->11.40% (524,292B) 0x109EE5: _M_allocate (stl_vector.h:378)
+|         ->11.40% (524,292B) 0x109EE5: _M_realloc_insert<int const&> (vector.tcc:459)
+|           ->11.40% (524,292B) 0x109EE5: push_back (stl_vector.h:1292)
+|             ->11.40% (524,292B) 0x109EE5: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_pthreads.cpp:21)
+|               ->11.40% (524,292B) 0x10A16E: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:67)
+|                 ->11.40% (524,292B) 0x10A155: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:63)
+|                 | ->11.40% (524,288B) 0x4BABAA3: start_thread (pthread_create.c:447)
+|                 | | ->11.40% (524,288B) 0x4C38A33: clone (clone.S:100)
+|                 | |   
+|                 | ->00.00% (4B) in 1+ places, all below ms_print's threshold (01.00%)
+|                 | 
+|                 ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                 
+->01.60% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->01.60% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->01.60% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->01.60% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->01.60% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.02% (912B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 36    242,315,256        4,074,704        4,074,644            60            0
+ 37    245,147,346        4,074,704        4,074,644            60            0
+ 38    249,014,592        4,074,704        4,074,644            60            0
+ 39    254,767,939        4,336,856        4,336,788            68            0
+ 40    258,381,068        4,533,456        4,533,392            64            0
+100.00% (4,533,392B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->88.23% (4,000,000B) 0x1092D9: allocate (new_allocator.h:151)
+| ->88.23% (4,000,000B) 0x1092D9: allocate (allocator.h:198)
+|   ->88.23% (4,000,000B) 0x1092D9: allocate (alloc_traits.h:482)
+|     ->88.23% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:381)
+|       ->88.23% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:378)
+|         ->88.23% (4,000,000B) 0x1092D9: _M_create_storage (stl_vector.h:398)
+|           ->88.23% (4,000,000B) 0x1092D9: _Vector_base (stl_vector.h:335)
+|             ->88.23% (4,000,000B) 0x1092D9: vector (stl_vector.h:557)
+|               ->88.23% (4,000,000B) 0x1092D9: main (parallel_sort_pthreads.cpp:79)
+|                 
+->10.12% (458,752B) 0x109EE5: allocate (new_allocator.h:151)
+| ->10.12% (458,752B) 0x109EE5: allocate (allocator.h:198)
+|   ->10.12% (458,752B) 0x109EE5: allocate (alloc_traits.h:482)
+|     ->10.12% (458,752B) 0x109EE5: _M_allocate (stl_vector.h:381)
+|       ->10.12% (458,752B) 0x109EE5: _M_allocate (stl_vector.h:378)
+|         ->10.12% (458,752B) 0x109EE5: _M_realloc_insert<int const&> (vector.tcc:459)
+|           ->10.12% (458,752B) 0x109EE5: push_back (stl_vector.h:1292)
+|             ->10.12% (458,752B) 0x109EE5: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_pthreads.cpp:21)
+|               ->10.12% (458,752B) 0x10A16E: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:67)
+|                 ->05.78% (262,144B) 0x10A15F: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:64)
+|                 | ->05.78% (262,144B) 0x10A155: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:63)
+|                 | | ->05.78% (262,144B) 0x4BABAA3: start_thread (pthread_create.c:447)
+|                 | | | ->05.78% (262,144B) 0x4C38A33: clone (clone.S:100)
+|                 | | |   
+|                 | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                 | | 
+|                 | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                 | 
+|                 ->04.34% (196,608B) 0x10A155: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:63)
+|                 | ->04.34% (196,608B) 0x10A15F: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:64)
+|                 | | ->04.34% (196,608B) 0x4BABAA3: start_thread (pthread_create.c:447)
+|                 | | | ->04.34% (196,608B) 0x4C38A33: clone (clone.S:100)
+|                 | | |   
+|                 | | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                 | | 
+|                 | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                 | 
+|                 ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                 
+->01.63% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->01.63% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->01.63% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->01.63% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->01.63% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.02% (912B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 41    262,889,523        4,402,376        4,402,320            56            0
+ 42    266,093,572        4,605,136        4,605,072            64            0
+ 43    270,897,884        4,599,000        4,598,932            68            0
+ 44    277,339,286        4,598,976        4,598,928            48            0
+ 45    280,931,599        6,171,856        6,171,792            64            0
+100.00% (6,171,792B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->64.81% (4,000,000B) 0x1092D9: allocate (new_allocator.h:151)
+| ->64.81% (4,000,000B) 0x1092D9: allocate (allocator.h:198)
+|   ->64.81% (4,000,000B) 0x1092D9: allocate (alloc_traits.h:482)
+|     ->64.81% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:381)
+|       ->64.81% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:378)
+|         ->64.81% (4,000,000B) 0x1092D9: _M_create_storage (stl_vector.h:398)
+|           ->64.81% (4,000,000B) 0x1092D9: _Vector_base (stl_vector.h:335)
+|             ->64.81% (4,000,000B) 0x1092D9: vector (stl_vector.h:557)
+|               ->64.81% (4,000,000B) 0x1092D9: main (parallel_sort_pthreads.cpp:79)
+|                 
+->33.98% (2,097,152B) 0x109EE5: allocate (new_allocator.h:151)
+| ->33.98% (2,097,152B) 0x109EE5: allocate (allocator.h:198)
+|   ->33.98% (2,097,152B) 0x109EE5: allocate (alloc_traits.h:482)
+|     ->33.98% (2,097,152B) 0x109EE5: _M_allocate (stl_vector.h:381)
+|       ->33.98% (2,097,152B) 0x109EE5: _M_allocate (stl_vector.h:378)
+|         ->33.98% (2,097,152B) 0x109EE5: _M_realloc_insert<int const&> (vector.tcc:459)
+|           ->33.98% (2,097,152B) 0x109EE5: push_back (stl_vector.h:1292)
+|             ->33.98% (2,097,152B) 0x109EE5: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_pthreads.cpp:21)
+|               ->33.98% (2,097,152B) 0x10A16E: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:67)
+|                 ->25.48% (1,572,864B) 0x4BABAA3: start_thread (pthread_create.c:447)
+|                 | ->25.48% (1,572,864B) 0x4C38A33: clone (clone.S:100)
+|                 |   
+|                 ->08.49% (524,288B) 0x10A155: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:63)
+|                 | ->08.49% (524,288B) 0x4BABAA3: start_thread (pthread_create.c:447)
+|                 | | ->08.49% (524,288B) 0x4C38A33: clone (clone.S:100)
+|                 | |   
+|                 | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                 | 
+|                 ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                 
+->01.19% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->01.19% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->01.19% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->01.19% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->01.19% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.01% (912B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 46    284,250,826        4,598,976        4,598,928            48            0
+ 47    288,796,192        4,074,704        4,074,644            60            0
+ 48    295,311,989        4,271,304        4,271,248            56            0
+ 49    298,215,500        4,074,704        4,074,644            60            0
+ 50    300,207,244        4,074,704        4,074,644            60            0
+ 51    303,073,044        4,074,704        4,074,644            60            0
+ 52    305,106,476        4,074,704        4,074,644            60            0
+100.00% (4,074,644B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.17% (4,000,000B) 0x1092D9: allocate (new_allocator.h:151)
+| ->98.17% (4,000,000B) 0x1092D9: allocate (allocator.h:198)
+|   ->98.17% (4,000,000B) 0x1092D9: allocate (alloc_traits.h:482)
+|     ->98.17% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:381)
+|       ->98.17% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:378)
+|         ->98.17% (4,000,000B) 0x1092D9: _M_create_storage (stl_vector.h:398)
+|           ->98.17% (4,000,000B) 0x1092D9: _Vector_base (stl_vector.h:335)
+|             ->98.17% (4,000,000B) 0x1092D9: vector (stl_vector.h:557)
+|               ->98.17% (4,000,000B) 0x1092D9: main (parallel_sort_pthreads.cpp:79)
+|                 
+->01.81% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->01.81% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->01.81% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->01.81% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->01.81% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.02% (916B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 53    307,137,216        4,467,912        4,467,856            56            0
+ 54    309,626,016        4,861,128        4,861,072            56            0
+ 55    311,631,394        4,123,848        4,123,792            56            0
+ 56    314,615,907        5,647,560        5,647,504            56            0
+ 57    318,459,515        4,074,680        4,074,640            40            0
+ 58    321,527,886        5,647,560        5,647,504            56            0
+ 59    324,608,280        7,220,424        7,220,368            56            0
+ 60    324,699,592        7,220,424        7,220,368            56            0
+100.00% (7,220,368B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->55.40% (4,000,000B) 0x1092D9: allocate (new_allocator.h:151)
+| ->55.40% (4,000,000B) 0x1092D9: allocate (allocator.h:198)
+|   ->55.40% (4,000,000B) 0x1092D9: allocate (alloc_traits.h:482)
+|     ->55.40% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:381)
+|       ->55.40% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:378)
+|         ->55.40% (4,000,000B) 0x1092D9: _M_create_storage (stl_vector.h:398)
+|           ->55.40% (4,000,000B) 0x1092D9: _Vector_base (stl_vector.h:335)
+|             ->55.40% (4,000,000B) 0x1092D9: vector (stl_vector.h:557)
+|               ->55.40% (4,000,000B) 0x1092D9: main (parallel_sort_pthreads.cpp:79)
+|                 
+->43.57% (3,145,728B) 0x109EE5: allocate (new_allocator.h:151)
+| ->43.57% (3,145,728B) 0x109EE5: allocate (allocator.h:198)
+|   ->43.57% (3,145,728B) 0x109EE5: allocate (alloc_traits.h:482)
+|     ->43.57% (3,145,728B) 0x109EE5: _M_allocate (stl_vector.h:381)
+|       ->43.57% (3,145,728B) 0x109EE5: _M_allocate (stl_vector.h:378)
+|         ->43.57% (3,145,728B) 0x109EE5: _M_realloc_insert<int const&> (vector.tcc:459)
+|           ->43.57% (3,145,728B) 0x109EE5: push_back (stl_vector.h:1292)
+|             ->43.57% (3,145,728B) 0x109EE5: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_pthreads.cpp:21)
+|               ->43.57% (3,145,728B) 0x10A16E: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:67)
+|                 ->43.57% (3,145,728B) 0x4BABAA3: start_thread (pthread_create.c:447)
+|                 | ->43.57% (3,145,728B) 0x4C38A33: clone (clone.S:100)
+|                 |   
+|                 ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                 
+->01.02% (73,728B) 0x491A38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->01.02% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->01.02% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->01.02% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->01.02% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->00.01% (912B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 61    329,557,915        4,074,680        4,074,640            40            0
+ 62    332,626,036        5,647,560        5,647,504            56            0
+ 63    335,706,446        7,220,424        7,220,368            56            0
+ 64    340,656,330        4,074,680        4,074,640            40            0
+ 65    343,724,980        5,647,560        5,647,504            56            0
+ 66    346,805,608        7,220,424        7,220,368            56            0
+ 67    352,008,303       10,370,184       10,366,096         4,088            0
+ 68    352,239,263       10,370,184       10,366,096         4,088            0
+99.96% (10,366,096B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->60.67% (6,291,456B) 0x109EE5: allocate (new_allocator.h:151)
+| ->60.67% (6,291,456B) 0x109EE5: allocate (allocator.h:198)
+|   ->60.67% (6,291,456B) 0x109EE5: allocate (alloc_traits.h:482)
+|     ->60.67% (6,291,456B) 0x109EE5: _M_allocate (stl_vector.h:381)
+|       ->60.67% (6,291,456B) 0x109EE5: _M_allocate (stl_vector.h:378)
+|         ->60.67% (6,291,456B) 0x109EE5: _M_realloc_insert<int const&> (vector.tcc:459)
+|           ->60.67% (6,291,456B) 0x109EE5: push_back (stl_vector.h:1292)
+|             ->60.67% (6,291,456B) 0x109EE5: merge(std::vector<int, std::allocator<int> >&, int, int, int) (parallel_sort_pthreads.cpp:21)
+|               ->60.67% (6,291,456B) 0x10A16E: parallel_merge_sort(void*) (parallel_sort_pthreads.cpp:67)
+|                 ->60.67% (6,291,456B) 0x1093CC: main (parallel_sort_pthreads.cpp:88)
+|                 | 
+|                 ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|                 
+->38.57% (4,000,000B) 0x1092D9: allocate (new_allocator.h:151)
+| ->38.57% (4,000,000B) 0x1092D9: allocate (allocator.h:198)
+|   ->38.57% (4,000,000B) 0x1092D9: allocate (alloc_traits.h:482)
+|     ->38.57% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:381)
+|       ->38.57% (4,000,000B) 0x1092D9: _M_allocate (stl_vector.h:378)
+|         ->38.57% (4,000,000B) 0x1092D9: _M_create_storage (stl_vector.h:398)
+|           ->38.57% (4,000,000B) 0x1092D9: _Vector_base (stl_vector.h:335)
+|             ->38.57% (4,000,000B) 0x1092D9: vector (stl_vector.h:557)
+|               ->38.57% (4,000,000B) 0x1092D9: main (parallel_sort_pthreads.cpp:79)
+|                 
+->00.72% (74,640B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 69    361,860,571        4,074,680        4,074,640            40            0
+ 70    368,878,314           75,704           75,664            40            0
