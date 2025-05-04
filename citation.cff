@@ -6,6 +6,8 @@ authors:
 title: "Master Thesis"
 version: 1.0.0
 identifiers:
+  - type: url
+    value: https://github.com/Ferdous-Jahan/Master-Thesis
   # - type: doi
   #   value: 10.5281/zenodo.1234
 date-released: 2025-05-04
