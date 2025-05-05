@@ -7,7 +7,7 @@ BENCHMARKS=("parallel_sort" "matrix_mul" "prod_cons" "atomic_ops" "thread_create
 RUNS=5
 
 # Compilation flags
-CXXFLAGS="-O3 -march=native -pthread -std=c++23"
+CXXFLAGS="-O3 -march=native -pthread -std=c++20"
 
 # Create results directory and file
 mkdir -p results
