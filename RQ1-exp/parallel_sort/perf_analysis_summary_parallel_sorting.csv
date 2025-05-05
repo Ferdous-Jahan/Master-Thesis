@@ -1,0 +1,61 @@
+File,Dominant Function,Percent Runtime,Overhead Type
+parallel_sort_pthreads_c++20_run5_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",42.29,Implicit
+parallel_sort_pthreads_c++20_run4_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",41.73,Implicit
+parallel_sort_par_c++20_run3_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",75.2,Implicit
+parallel_sort_par_c++20_run2_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",73.18,Implicit
+parallel_sort_threads_c++20_run1_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",38.74,Implicit
+parallel_sort_par_unseq_c++20_run1_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",74.89,Implicit
+parallel_sort_pthreads_c++17_run3_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",37.82,Implicit
+parallel_sort_pthreads_c++17_run2_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",38.01,Implicit
+parallel_sort_par_c++17_run5_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",73.96,Implicit
+parallel_sort_par_c++17_run4_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",75.68,Implicit
+parallel_sort_pthreads_c++23_run5_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",43.69,Implicit
+parallel_sort_pthreads_c++23_run4_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",40.35,Implicit
+parallel_sort_par_c++23_run3_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",74.22,Implicit
+parallel_sort_par_c++23_run2_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",77.0,Implicit
+parallel_sort_par_unseq_c++23_run1_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",73.68,Implicit
+parallel_sort_threads_c++23_run1_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",40.69,Implicit
+parallel_sort_pthreads_c++23_run2_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",43.6,Implicit
+parallel_sort_pthreads_c++23_run3_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",43.03,Implicit
+parallel_sort_par_c++23_run4_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",74.84,Implicit
+parallel_sort_par_c++23_run5_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",76.73,Implicit
+parallel_sort_pthreads_c++20_run2_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",42.06,Implicit
+parallel_sort_pthreads_c++20_run3_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",42.62,Implicit
+parallel_sort_par_c++20_run4_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",76.66,Implicit
+parallel_sort_par_c++20_run5_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",75.02,Implicit
+parallel_sort_pthreads_c++17_run4_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",38.12,Implicit
+parallel_sort_pthreads_c++17_run5_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",38.75,Implicit
+parallel_sort_threads_c++17_run1_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",36.83,Implicit
+parallel_sort_par_unseq_c++17_run1_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",75.0,Implicit
+parallel_sort_par_c++17_run2_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",76.88,Implicit
+parallel_sort_par_c++17_run3_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",73.92,Implicit
+parallel_sort_par_c++23_run1_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",76.31,Implicit
+parallel_sort_par_unseq_c++23_run3_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",72.71,Implicit
+parallel_sort_par_unseq_c++23_run2_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",75.23,Implicit
+parallel_sort_threads_c++23_run2_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",40.09,Implicit
+parallel_sort_threads_c++23_run3_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",38.85,Implicit
+parallel_sort_pthreads_c++17_run1_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",38.2,Implicit
+parallel_sort_par_unseq_c++17_run5_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",76.33,Implicit
+parallel_sort_par_unseq_c++17_run4_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",76.85,Implicit
+parallel_sort_threads_c++17_run4_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",36.01,Implicit
+parallel_sort_threads_c++17_run5_perf.txt,"__gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter)",35.15,Implicit
+parallel_sort_par_c++20_run1_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",72.7,Implicit
+parallel_sort_threads_c++20_run2_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",40.59,Implicit
+parallel_sort_threads_c++20_run3_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",37.62,Implicit
+parallel_sort_par_unseq_c++20_run3_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",72.72,Implicit
+parallel_sort_par_unseq_c++20_run2_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",74.72,Implicit
+parallel_sort_threads_c++17_run3_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",35.11,Implicit
+parallel_sort_threads_c++17_run2_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",34.89,Implicit
+parallel_sort_par_unseq_c++17_run2_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",77.74,Implicit
+parallel_sort_par_unseq_c++17_run3_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",77.53,Implicit
+parallel_sort_par_c++17_run1_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",74.63,Implicit
+parallel_sort_pthreads_c++20_run1_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",42.45,Implicit
+parallel_sort_par_unseq_c++20_run4_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",74.03,Implicit
+parallel_sort_par_unseq_c++20_run5_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",71.94,Implicit
+parallel_sort_threads_c++20_run5_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",39.39,Implicit
+parallel_sort_threads_c++20_run4_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",40.22,Implicit
+parallel_sort_pthreads_c++23_run1_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",41.27,Implicit
+parallel_sort_threads_c++23_run5_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",40.88,Implicit
+parallel_sort_threads_c++23_run4_perf.txt,"merge(std::vector<int, std::allocator<int> >&, int, int, int)",38.85,Implicit
+parallel_sort_par_unseq_c++23_run4_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",74.02,Implicit
+parallel_sort_par_unseq_c++23_run5_perf.txt,">(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_comp_iter<std::less<int> >)",75.62,Implicit
