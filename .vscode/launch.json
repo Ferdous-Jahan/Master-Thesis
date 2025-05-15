@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug how_to_parallel",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/RQ3-exp/how_to_parallel",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false,
+      "environment": [],
+      "externalConsole": false,
+      "preLaunchTask": "build how_to_parallel"
+    }
+  ]
+}

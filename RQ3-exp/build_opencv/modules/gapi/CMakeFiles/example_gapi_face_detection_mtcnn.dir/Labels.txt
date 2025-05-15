@@ -1,0 +1,9 @@
+# Target labels
+ Main
+ opencv_gapi
+ Sample
+# Source files and their labels
+/Users/ferdousjahan/Documents/MyStuffs/Thesis/Master-Thesis/RQ3-exp/opencv/modules/gapi/samples/face_detection_mtcnn.cpp
+ Main
+ opencv_gapi
+ Sample
