@@ -82,38 +82,41 @@ void StdThreadParallelForAPI::worker_loop(int worker_id) {
 void StdThreadParallelForAPI::parallel_for(int N, FN_parallel_for_body_cb_t body_callback, void* callback_data) {
     if (N <= 0) return;
 
-    if (configured_num_threads_ == 0 || workers_.empty()) { // Fallback to sequential execution
-        // std::cout << "[" << backend_name_ << "] Running sequentially (" << N << " tasks)" << std::endl;
-        for (int i = 0; i < N; ++i) {
-            body_callback(i, i + 1, callback_data); // OpenCV expects callback for each task unit
-        }
+    int num_threads = configured_num_threads_;
+    if (num_threads <= 0 || workers_.empty() || N < num_threads) {
+        // Fallback to sequential execution
+        body_callback(0, N, callback_data);
         return;
     }
 
-    // std::cout << "[" << backend_name_ << "] Running parallel (" << N << " tasks, " << configured_num_threads_ << " threads)" << std::endl;
-    tasks_in_current_job_ = N; // Set the count for this job
+    // Stripe the work
+    int stripe_size = (N + num_threads - 1) / num_threads;
+    int num_stripes = (N + stripe_size - 1) / stripe_size;
 
-    for (int i = 0; i < N; ++i) {
-        { // Lock scope for task_queue_
+    tasks_in_current_job_ = num_stripes;
+
+    for (int t = 0; t < num_stripes; ++t) {
+        int start = t * stripe_size;
+        int end = std::min(N, start + stripe_size);
+        if (start >= end) continue;
+        {
             std::unique_lock<std::mutex> lock(queue_mutex_);
-            task_queue_.emplace([this, i, body_callback, callback_data]() {
-                body_callback(i, i + 1, callback_data); // Process one task unit
-                // Decrement task counter and notify main thread if this is the last task
+            task_queue_.emplace([this, start, end, body_callback, callback_data]() {
+                body_callback(start, end, callback_data);
                 if (tasks_in_current_job_.fetch_sub(1, std::memory_order_acq_rel) == 1) {
                     main_condition_.notify_one();
                 }
             });
         }
-        worker_condition_.notify_one(); // Notify one worker that a task is available
+        worker_condition_.notify_one();
     }
 
     // Wait for all tasks of the current job to complete
-    std::mutex dummy_main_mutex_for_cv_wait; // CV needs a mutex to wait on
+    std::mutex dummy_main_mutex_for_cv_wait;
     std::unique_lock<std::mutex> main_lock(dummy_main_mutex_for_cv_wait);
     main_condition_.wait(main_lock, [this] {
         return tasks_in_current_job_.load(std::memory_order_acquire) == 0;
     });
-    // std::cout << "[" << backend_name_ << "] Parallel job finished." << std::endl;
 }
 
 int StdThreadParallelForAPI::getNumThreads() const {
