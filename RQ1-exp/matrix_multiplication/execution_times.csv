@@ -1,9 +1,9 @@
 implementation,cpp_standard,run,execution_time_seconds
-matrix_mul_par_c++17,c++17,1,0.38
-matrix_mul_par_c++17,c++17,2,0.40
-matrix_mul_par_c++17,c++17,3,0.41
-matrix_mul_par_c++17,c++17,4,0.36
-matrix_mul_par_c++17,c++17,5,0.41
+matrix_mul_par_c++17,c++17,1,0.18
+matrix_mul_par_c++17,c++17,2,0.19
+matrix_mul_par_c++17,c++17,3,0.26
+matrix_mul_par_c++17,c++17,4,0.19
+matrix_mul_par_c++17,c++17,5,0.24
 matrix_mul_par_unseq_c++17,c++17,1,0.25
 matrix_mul_par_unseq_c++17,c++17,2,0.19
 matrix_mul_par_unseq_c++17,c++17,3,0.29
