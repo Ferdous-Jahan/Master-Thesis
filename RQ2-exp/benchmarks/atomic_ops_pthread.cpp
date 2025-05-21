@@ -27,9 +27,10 @@ void run_atomic_ops()
     pthread_t tid[threads];
 
     auto start = std::chrono::steady_clock::now();
-    for (int i = 0; i < threads; ++i)
-        pthread_create(&tid[i], nullptr, atomic_increment_p, &ops);
-
+    for (int i = 0; i < threads; ++i){
+        int* thread_ops = new int(ops / threads);
+        pthread_create(&tid[i], nullptr, atomic_increment_p, thread_ops);
+    }
     for (int i = 0; i < threads; ++i)
         pthread_join(tid[i], nullptr);
 
